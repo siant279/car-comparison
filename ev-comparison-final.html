@@ -109,6 +109,30 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
 .cat{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--bg)!important;border-top:1.5px solid var(--border);padding-top:.65rem!important}
 .win{font-weight:600}.win.r{color:var(--r)}.win.b{color:var(--b)}.win.p10{color:var(--p10)}.win.p12{color:var(--p12)}
 .dim{color:var(--muted)}
+/* WINNER — consistent per-car highlight in tables */
+.winner-legend{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1rem;font-size:.75rem;color:var(--muted)}
+.winner-legend .wl{padding:.2rem .55rem;border-radius:4px;font-family:'Syne',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.06em}
+.wl-r{background:var(--rl);color:var(--r)}.wl-b{background:var(--bl);color:var(--b)}.wl-p10{background:var(--p10l);color:var(--p10)}.wl-p12{background:var(--p12l);color:var(--p12)}
+.ct td.win{font-weight:600}
+.ct td.win.r{background:var(--rl);color:var(--r);box-shadow:inset 3px 0 0 var(--r)}
+.ct td.win.b{background:var(--bl);color:var(--b);box-shadow:inset 3px 0 0 var(--b)}
+.ct td.win.p10{background:var(--p10l);color:var(--p10);box-shadow:inset 3px 0 0 var(--p10)}
+.ct td.win.p12{background:var(--p12l);color:var(--p12);box-shadow:inset 3px 0 0 var(--p12)}
+.ct td.tie{color:var(--muted);font-style:italic}
+.ct td.dim-win{color:var(--muted)}
+.priority-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.25rem}
+@media(max-width:720px){.priority-grid{grid-template-columns:1fr}}
+.pri-card{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1rem}
+.pri-num{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent);line-height:1}
+.pri-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;margin:.35rem 0}
+.review-card{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:.75rem}
+.review-card h4{font-family:'Syne',sans-serif;font-size:.9rem;margin-bottom:.35rem}
+.review-card a{color:var(--b);font-size:.8rem}
+.review-quote{font-size:.82rem;color:var(--muted);font-style:italic;margin:.5rem 0;border-left:2px solid var(--border);padding-left:.75rem}
+.pick-box{background:linear-gradient(135deg,var(--blu-bg),var(--p10l));border:2px solid var(--b);border-radius:12px;padding:1.25rem;margin-top:1.25rem}
+.pick-box h3{font-family:'Syne',sans-serif;font-size:1.15rem;color:var(--b);margin-bottom:.5rem}
+.pick-alt{border-left:3px solid var(--p10);padding-left:1rem;margin-top:.75rem;font-size:.84rem}
+
 
 /* WEATHER SECTION */
 .weather-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
@@ -220,7 +244,7 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
 <div class="hdr">
   <div class="eyebrow">Truckee, CA · Family EV Decision Guide · May 2026 · Updated</div>
   <h1>Rivian R2 <span class="dot">·</span> BMW iX3 <span class="dot">·</span> Volvo EX60 P10 <span class="dot">·</span> Volvo EX60 P12</h1>
-  <p class="hdr-sub">Replacing a Land Rover Discovery · Keeping a Defender · Toddler + dog · Road trips to Steamboat, SoCal, Oregon</p>
+  <p class="hdr-sub">Replacing a Land Rover Discovery · Cash purchase · Range &amp; charging first · Truckee → Steamboat / SF</p>
   <div class="ctx-bar">
     <span class="ctx-pill"><strong>School run</strong> + errands</span>
     <span class="ctx-pill"><strong>Reno</strong> monthly ~35 mi</span>
@@ -239,12 +263,15 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-link" href="#quickstats">Quick Stats</a>
+    <a class="nav-link" href="#priorities">Priorities</a>
     <a class="nav-link" href="#charging">Charging</a>
     <a class="nav-link" href="#weather">Weather &amp; Range</a>
     <a class="nav-link" href="#steamboat">Steamboat Trip</a>
     <a class="nav-link" href="#specs">Full Specs</a>
     <a class="nav-link" href="#pricing">Pricing</a>
     <a class="nav-link" href="#incentives">Incentives</a>
+    <a class="nav-link" href="#reviews">Reviews</a>
+    <a class="nav-link" href="#gaps">Gaps</a>
     <a class="nav-link" href="#proscons">Pros &amp; Cons</a>
     <a class="nav-link" href="#compare">Side-by-Side</a>
     <a class="nav-link" href="#verdict">Verdict</a>
@@ -267,7 +294,7 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
       </div>
       <div class="stat-col">
         <div class="stat-head">BMW iX3</div>
-        <div class="sr"><span class="sl">Your build</span><span class="sv b">$69,981 ✓</span></div>
+        <div class="sr"><span class="sl">Your build</span><span class="sv b">$70,501 ✓</span></div>
         <div class="sr"><span class="sl">Roof rack</span><span class="sv b">Not in build</span></div>
         <div class="sr"><span class="sl">EPA range</span><span class="sv b">383–434 mi</span></div>
         <div class="sr"><span class="sl">Peak DC</span><span class="sv b">400 kW</span></div>
@@ -299,10 +326,63 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
   </div>
 </div>
 
+
+<hr class="div">
+
+<!-- DECISION PRIORITIES -->
+<div class="section container" id="priorities">
+  <div class="sec-label">How we weight this decision · Cash purchase</div>
+  <div class="sec-title">Your Priorities (in order)</div>
+
+  <div class="priority-grid">
+    <div class="pri-card" style="border-color:var(--accent)">
+      <div class="pri-num">#1</div>
+      <div class="pri-title">Range &amp; charging speed</div>
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.5">EPA and <em>real</em> winter/highway range matter most. Fewer Steamboat stops, faster DC sessions, and January SF round-trips without range anxiety drive the scoring below.</p>
+    </div>
+    <div class="pri-card">
+      <div class="pri-num">#2</div>
+      <div class="pri-title">Brand · safety · quality</div>
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.5">Volvo safety culture + multi-adaptive belt · BMW driving dynamics + Neue Klasse platform · Rivian adventure credibility but newer brand.</p>
+    </div>
+    <div class="pri-card">
+      <div class="pri-num">#3</div>
+      <div class="pri-title">Value (not lowest price)</div>
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.5">You're paying <strong>cash</strong> — no loan-interest tax tricks. Value = range + charging + features per dollar, not sticker price alone.</p>
+    </div>
+  </div>
+
+  <div class="alert alert-blu">
+    <div class="alert-hd">Cash purchase note</div>
+    OBBBA loan-interest deductions <strong>do not apply</strong> to your purchase. The Rivian's ~$5,280 "effective" financed price advantage is irrelevant. Compare <strong>real cash prices</strong>: R2 $57,990 base · BMW $70,501 configured · P10 $68,560 · P12 $72,500.
+  </div>
+
+  <div class="cw" style="margin-top:1rem">
+    <table class="ct">
+      <thead><tr><th>Model</th><th class="bh">Cash price</th><th class="bh">$/EPA mi</th><th class="bh">$/winter mi (Feb est.)</th><th>Verdict on value-for-range</th></tr></thead>
+      <tbody>
+        <tr><td>Rivian R2 Perf.</td><td>$57,990</td><td class="win r">~$173/mi</td><td class="dim">~$237/mi</td><td class="dim">Cheapest cash — weakest range/charging</td></tr>
+        <tr><td>BMW iX3 (your build)</td><td class="win b">$70,501</td><td class="win b">~$162/mi</td><td class="win b">~$217/mi</td><td class="win b">Best range per dollar</td></tr>
+        <tr><td>Volvo EX60 P10</td><td>$68,560</td><td>~$213/mi</td><td>~$277/mi</td><td>Strong family kit; weaker winter $/mi</td></tr>
+        <tr><td>Volvo EX60 P12</td><td>$72,500</td><td>~$181/mi</td><td>~$238/mi</td><td>Near-BMW winter value + Volvo safety</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <!-- CHARGING SPECS -->
 <div class="section container" id="charging">
   <div class="sec-label">DC Fast · AC Home · Architecture</div>
   <div class="sec-title">Charging Specifications — All Four Cars</div>
+  <div class="winner-legend">
+    <span>Row winner:</span>
+    <span class="wl wl-r">Rivian R2</span>
+    <span class="wl wl-b">BMW iX3</span>
+    <span class="wl wl-p10">Volvo P10</span>
+    <span class="wl wl-p12">Volvo P12</span>
+    <span style="opacity:.7">— highlighted cell = best for that row</span>
+  </div>
+
 
   <div class="alert alert-warn" style="margin-bottom:1.25rem;">
     <div class="alert-hd">Key insight: P12 charges more slowly per stop than P10</div>
@@ -322,21 +402,21 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
       </thead>
       <tbody>
         <tr><td class="cat" colspan="5">DC Fast Charging</td></tr>
-        <tr><td>Architecture</td><td>400V (355V nominal)</td><td>800V class (699V nominal, 400/800V switchable)</td><td class="win p10">800V true</td><td class="win p12">800V true</td></tr>
-        <tr><td>Usable battery</td><td>86.8 kWh</td><td class="win b">108.7 kWh</td><td>91 kWh</td><td class="win p12">112 kWh</td></tr>
-        <tr><td>Peak DC</td><td>210 kW</td><td class="win b">400 kW</td><td>370 kW</td><td>370 kW</td></tr>
-        <tr><td><strong>Avg DC 10–80%</strong></td><td class="dim">~129 kW</td><td>~236 kW</td><td class="win p10">~247 kW</td><td>~215–230 kW</td></tr>
-        <tr><td><strong>10–80% time</strong></td><td class="dim">~29 min</td><td>~20 min</td><td class="win p10">~16 min</td><td>~19 min</td></tr>
-        <tr><td>Miles added in 10 min</td><td>~80 mi</td><td>~185 mi</td><td>~165 mi</td><td class="win p12">~173 mi</td></tr>
-        <tr><td>Miles per min (10–80%)</td><td class="dim">~8 mi/min</td><td>~13–14.5 mi/min</td><td class="win p10">~13–14 mi/min</td><td>~12.5–13 mi/min</td></tr>
-        <tr><td>V3 Supercharger (450–500V) speed</td><td class="win r">Full speed — 400V native, unaffected</td><td>Mostly fine — splits to 400V modules</td><td class="dim">Capped ~150 kW</td><td class="dim">Capped ~150 kW</td></tr>
-        <tr><td>On V4 / EA 800V station</td><td class="dim">210 kW max</td><td class="win b">Up to 400 kW</td><td>Up to 370 kW</td><td>Up to 370 kW</td></tr>
+        <tr><td>Architecture</td><td>400V (355V nominal)</td><td>800V class (699V nominal, 400/800V switchable)</td><td class="win p10">800V true <span class="best">Winner</span></td><td class="tie">800V true (tie)</td></tr>
+        <tr><td>Usable battery</td><td>86.8 kWh</td><td class="win b">108.7 kWh</td><td>91 kWh</td><td class="win p12">112 kWh <span class="best">Winner</span></td></tr>
+        <tr><td>Peak DC</td><td>210 kW</td><td class="win b">400 kW <span class="best">Winner</span></td><td>370 kW</td><td>370 kW</td></tr>
+        <tr><td><strong>Avg DC 10–80%</strong></td><td class="dim">~129 kW</td><td>~236 kW</td><td class="win p10">~247 kW <span class="best">Winner</span></td><td>~215–230 kW</td></tr>
+        <tr><td><strong>10–80% time</strong></td><td class="dim">~29 min</td><td>~20 min</td><td class="win p10">~16 min <span class="best">Winner</span></td><td>~19 min</td></tr>
+        <tr><td>Miles added in 10 min</td><td>~80 mi</td><td class="win b">~185 mi <span class="best">Winner</span></td><td>~165 mi</td><td>~173 mi</td></tr>
+        <tr><td>Miles per min (10–80%)</td><td class="dim">~8 mi/min</td><td>~13–14.5 mi/min</td><td class="win b">~13–14.5 mi/min <span class="best">Winner</span></td><td class="win p10">~13–14 mi/min</td><td>~12.5–13 mi/min</td></tr>
+        <tr><td>V3 Supercharger (450–500V) speed</td><td class="win r">Full speed — 400V native <span class="best">Winner</span></td><td>Mostly fine — splits to 400V modules</td><td class="dim">Capped ~150 kW</td><td class="dim">Capped ~150 kW</td></tr>
+        <tr><td>On V4 / EA 800V station</td><td class="dim">210 kW max</td><td class="win b">Up to 400 kW <span class="best">Winner</span></td><td class="tie">Up to 370 kW</td><td class="tie">Up to 370 kW</td></tr>
         <tr><td class="cat" colspan="5">AC Home Charging</td></tr>
-        <tr><td>Onboard AC charger</td><td>11.5 kW (48A, 240V)</td><td>15.4 kW std / 22 kW optional</td><td class="win p10">19.2 kW (80A, 240V)</td><td class="win p12">19.2 kW (80A, 240V)</td></tr>
+        <tr><td>Onboard AC charger</td><td>11.5 kW (48A, 240V)</td><td>15.4 kW std / 22 kW optional</td><td class="win p10">19.2 kW (80A) <span class="best">Winner</span></td><td class="tie">19.2 kW (tie)</td></tr>
         <tr><td>Miles/hr (standard 11.5 kW wall)</td><td class="win r">~38 mi/hr (most efficient)</td><td>~29 mi/hr</td><td>~28 mi/hr</td><td>~28 mi/hr</td></tr>
         <tr><td>Full charge time (at home L2)</td><td>~9 hrs</td><td>~8–9 hrs</td><td>~4.7 hrs at 19.2 kW / ~9 hrs at 11.5 kW</td><td>~5.8 hrs at 19.2 kW / ~11 hrs at 11.5 kW</td></tr>
-        <tr><td>Bidirectional (V2H/V2G)</td><td class="dim">Not confirmed at launch</td><td>V2L, V2H, V2V, V2G (optional adapters)</td><td class="win p10">V2H prepared (standard)</td><td class="win p12">V2H prepared (standard)</td></tr>
-        <tr><td>Charge port</td><td class="win r">NACS native</td><td>NACS native + CCS1 adapter incl.</td><td class="win p10">NACS native (1st Volvo)</td><td class="win p12">NACS native</td></tr>
+        <tr><td>Bidirectional (V2H/V2G)</td><td class="dim">Not confirmed at launch</td><td>V2L, V2H, V2V, V2G (optional adapters)</td><td class="win b">V2L/V2H/V2V (adapters) <span class="best">Winner</span></td><td class="tie">V2H prepared</td><td class="tie">V2H prepared</td></tr>
+        <tr><td>Charge port</td><td class="win r">NACS · best V3 speed <span class="best">Winner</span></td><td>NACS + CCS adapter</td><td class="tie">NACS native</td><td class="tie">NACS native</td></tr>
         <tr><td>Battery preconditioning</td><td>Yes (app + nav)</td><td>Yes (auto on nav to charger)</td><td>Yes (Breathe Charge — up to 30% faster in cold)</td><td>Yes (Breathe Charge)</td></tr>
       </tbody>
     </table>
@@ -762,8 +842,8 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
           <tr><th></th><th class="rh">R2 · Jul / Feb</th><th class="bh">iX3 · Jul / Feb</th><th class="p10h">P10 · Jul / Feb</th><th class="p12h">P12 · Jul / Feb</th></tr>
         </thead>
         <tbody>
-          <tr><td>Charge stops</td><td class="dim">4 / 5</td><td class="win b">2 / 3</td><td>3 / 4–5</td><td class="win p12">2 / 3</td></tr>
-          <tr><td>Total charge time</td><td class="dim">~100 / ~140 min</td><td class="win b">~39 / ~70 min</td><td>~48 / ~100 min</td><td class="win p12">~39 / ~75 min</td></tr>
+          <tr><td>Charge stops</td><td class="dim">4 / 5</td><td class="win b">2 / 3 <span class="best">Winner</span></td><td class="dim">3 / 4–5</td><td class="tie">2 / 3 (tie w/ BMW)</td></tr>
+          <tr><td>Total charge time</td><td class="dim">~100 / ~140 min</td><td class="win b">~39 / ~70 min <span class="best">Winner</span></td><td class="dim">~48 / ~100 min</td><td class="tie">~39 / ~75 min</td></tr>
           <tr><td>Extra Feb penalty</td><td class="dim">+40–50 min, +1 stop</td><td>+30–35 min, +1 stop</td><td class="dim">+50–60 min, +1–2 stops</td><td>+35–40 min, +1 stop</td></tr>
           <tr><td>Snow capability</td><td class="win r">Best — clearance + all-terrain both months</td><td>Good both months</td><td>Adequate both months</td><td>Good both months</td></tr>
         </tbody>
@@ -919,16 +999,16 @@ function showSeason(s){
       <div style="margin-top:1rem;padding-top:.75rem;border-top:1.5px solid var(--border);">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;">
           <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;">Configured total (from PDF)</span>
-          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--b);">$69,981</span>
+          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--b);">$70,501</span>
         </div>
         <div style="font-size:.78rem;color:var(--muted);line-height:1.6;">
-          Base $61,500 + Comfort $1,500 + Driving Assistance Pro $2,500 + Parking Assistance $750 + 3-zone $200 + heated rear $500 + hitch $750 + Harman Kardon $650 + adapters $281 + destination $1,350 = <strong>$69,981</strong>. Confirmed PDF (Build FW0885MQ).
+          Base $61,500 + Comfort $1,500 + Driving Assistance Pro $2,500 + Parking Assistance $750 + 3-zone $200 + heated rear $500 + hitch $750 + Harman Kardon $650 + adapters $281 + destination $1,350 + crossbars $520 = <strong>$70,501</strong>. Confirmed PDF (Build FW0885MQ).
         </div>
         <div style="margin-top:.75rem;background:#FFF8E0;border:1px solid #F5D98A;border-radius:7px;padding:9px 12px;font-size:.8rem;color:#6B4E00;">
           <strong>⚠️ Not in this build — still to consider:</strong><br>
           • <strong>Roof rack / load bars</strong> — needed for Thule roof box (not in PDF; est. +$500–$520 at dealer).<br>
           • <strong>Technology Package: +$1,900</strong> — 3D HUD + Iconic Glow lighting. Optional.<br>
-          <strong>Driving Assistance Pro is already included ($2,500).</strong> With roof rack est.: ~$70,500.
+          <strong>Crossbars (+$520) included in $70,501 total.</strong> Technology Package (+$1,900) still optional.
         </div>
       </div>
     </div>
@@ -982,7 +1062,7 @@ function showSeason(s){
         </div>
         <div style="font-size:.78rem;color:var(--muted);line-height:1.6;">
           Base Plus $62,145 + Cardamom $850 + Climate $750 + booster $500 + electrochromic $950 + hitch $2,070 + load bars $520 + mud flaps $215 + sunshade $290 + V2L $270 = <strong>$68,560</strong>. Destination included in base.<br>
-          <strong>Volvo is $1,421 less than the BMW ($69,981)</strong> — and includes roof bars, Pilot Assist, and integrated booster cushions.
+          <strong>Volvo is $1,941 less than the BMW ($70,501)</strong> — and includes roof bars, Pilot Assist, and integrated booster cushions.
         </div>
       </div>
     </div>
@@ -1060,7 +1140,7 @@ function showSeason(s){
           <tr><td>Sound</td><td>Harman Kardon $650</td><td>Bose (Plus std)</td><td>Bose (Plus std)</td></tr>
           <tr><td>Paint</td><td>Alpine White incl.</td><td>Forest Lake incl.</td><td>Forest Lake incl.</td></tr>
           <tr><td>Destination</td><td>$1,350</td><td>Incl. in base</td><td>Incl. in base</td></tr>
-          <tr><td style="font-weight:600;">Configured total (PDF / assumed)</td><td style="font-weight:600;color:var(--b);">$69,981 ✓</td><td style="font-weight:600;color:var(--p10);">$68,560 ✓</td><td style="font-weight:600;color:var(--p12);">$72,500</td></tr>
+          <tr><td style="font-weight:600;">Configured total (PDF / assumed)</td><td style="font-weight:600;color:var(--b);">$70,501 ✓</td><td style="font-weight:600;color:var(--p10);">$68,560 ✓</td><td style="font-weight:600;color:var(--p12);">$72,500</td></tr>
         </tbody>
       </table>
       <div style="font-size:.75rem;color:var(--muted);margin-top:.6rem;">BMW & Volvo P10 from official configurator PDFs May 19, 2026. P12 at $72,500 is your stated assumption.</div>
@@ -1082,8 +1162,8 @@ function showSeason(s){
 
   <div class="cards3" style="margin-bottom:1.25rem;">
     <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1.1rem;">
-      <div style="font-size:.82rem;font-weight:500;margin-bottom:.6rem">OBBBA Loan Interest Deduction (Federal)</div>
-      <div class="src-row"><span class="src-lbl">Who qualifies</span><span class="src-amt">R2 only</span><span class="src-detail">US-assembled (Normal, IL). iX3 (Hungary) and EX60 (Sweden) do not qualify.</span></div>
+      <div style="font-size:.82rem;font-weight:500;margin-bottom:.6rem">OBBBA Loan Interest (N/A — paying cash)</div>
+      <div class="src-row"><span class="src-lbl">Who qualifies</span><span class="src-amt">N/A</span><span class="src-detail">You are paying cash — loan interest deduction does not apply. Listed for reference only.</span></div>
       <div class="src-row"><span class="src-lbl">Max deduction/yr</span><span class="src-amt">Up to $10,000</span><span class="src-detail">On car loan interest, through 2028. Above-the-line, no need to itemize.</span></div>
       <div class="src-row"><span class="src-lbl">Income phase-out (MFJ)</span><span class="src-amt">$200K–$250K MAGI</span><span class="src-detail">Full deduction under $200K. Gone at $250K.</span></div>
       <div class="src-row"><span class="src-lbl">Real value (22% bracket, $8K interest)</span><span class="src-amt">~$1,760/yr</span><span class="src-detail">~$5,280 over 3-year loan — real financial advantage for R2 vs EX60/iX3.</span></div>
@@ -1104,11 +1184,76 @@ function showSeason(s){
 
   <div class="alert alert-grn">
     <div class="alert-hd">Stack everything before June 30 — install your charger now</div>
-    Liberty $1,500 + 30C $1,000 = up to $2,500 toward your charger install. TDPUD $500 + 30C $1,000 = up to $1,500. This is available regardless of which car you choose. A quality 19.2 kW (80A) smart charger + install typically costs $1,800–$2,500 — could be largely or fully covered. Include it in the vehicle loan if buying an R2 to also deduct the interest under OBBBA.
+    Liberty $1,500 + 30C $1,000 = up to $2,500 toward your charger install. TDPUD $500 + 30C $1,000 = up to $1,500. This is available regardless of which car you choose. A quality 19.2 kW (80A) smart charger + install typically costs $1,800–$2,500 — could be largely or fully covered. Install your home charger before June 30, 2026 to capture 30C + local rebates regardless of which EV you buy.
   </div>
 </div>
 
 <hr class="div">
+
+
+<hr class="div">
+
+<!-- REVIEWS -->
+<div class="section container" id="reviews">
+  <div class="sec-label">Press &amp; expert first drives · Spring 2026</div>
+  <div class="sec-title">What Reviewers Say</div>
+
+  <div class="review-card b" style="border-left:3px solid var(--b)">
+    <h4 style="color:var(--b)">2027 BMW iX3 50 xDrive</h4>
+    <p class="review-quote">Car and Driver: "Neue Klasse is in session" — calls it BMW's most compelling EV yet; 800V architecture, up to 400 kW charging, and range that competes at the top of the class. The Drive praises handling and build quality vs prior BMW EVs.</p>
+    <p style="font-size:.82rem;margin-top:.4rem"><strong>Range/charging:</strong> EPA up to ~434 mi; reviewers cite ~175–230 mi added in 10 min on fast chargers. <strong>Caveat:</strong> US deliveries fall 2026; long-term reliability TBD on new platform.</p>
+    <p style="margin-top:.35rem"><a href="https://www.caranddriver.com/bmw/ix3" target="_blank" rel="noopener">Car and Driver — iX3 hub</a> · <a href="https://www.thedrive.com/car-reviews/2027-bmw-ix3-50-xdrive-first-drive-review" target="_blank" rel="noopener">The Drive — first drive</a> · <a href="https://www.consumerreports.org/cars/bmw/ix3/2027/overview/" target="_blank" rel="noopener">Consumer Reports overview</a></p>
+  </div>
+
+  <div class="review-card p10" style="border-left:3px solid var(--p10)">
+    <h4 style="color:var(--p10)">2027 Volvo EX60 (P10 / P12)</h4>
+    <p class="review-quote">Consumer Reports preview: highlights 400-mile P12 target, fastest-charging Volvo ever (173 mi in 10 min at 400 kW), NACS port, Google Gemini, and adaptive seatbelt tech. KBB notes EX60 slots between EX40 and EX90 with competitive pricing vs BMW iX3.</p>
+    <p style="font-size:.82rem;margin-top:.4rem"><strong>Range/charging:</strong> P10 ~322 mi EPA; P12 ~400 mi. <strong>Caveat:</strong> Full US reviews limited pre-launch; P12 not orderable yet; V3 Supercharger speeds capped lower than EA in our analysis.</p>
+    <p style="margin-top:.35rem"><a href="https://www.consumerreports.org/cars/hybrids-evs/2027-volvo-ex60-review-a1077293479/" target="_blank" rel="noopener">Consumer Reports — EX60 preview</a> · <a href="https://www.kbb.com/car-news/2027-volvo-ex60-debuts-with-400-mile-range/" target="_blank" rel="noopener">Kelley Blue Book debut</a> · <a href="https://arstechnica.com/cars/2026/01/heres-volvos-new-ex60-60000-electric-midsize-suv/" target="_blank" rel="noopener">Ars Technica</a></p>
+  </div>
+
+  <div class="review-card r" style="border-left:3px solid var(--r)">
+    <h4 style="color:var(--r)">2026 Rivian R2 Performance</h4>
+    <p class="review-quote">Consumer Reports road test and Electrek EPA coverage: 328–335 mi EPA on 21" tires; peak ~210–217 kW DC; 10–80% in ~29 min. CR notes strong performance and packaging; charging lags 800V Europeans on road trips.</p>
+    <p style="font-size:.82rem;margin-top:.4rem"><strong>Range/charging:</strong> Good EPA number but real-world highway efficiency often below class; best Tesla V3 compatibility. <strong>Strength:</strong> available now, adventure hardware, US service story growing.</p>
+    <p style="margin-top:.35rem"><a href="https://www.consumerreports.org/cars/rivian/r2/2026/road-test-report/" target="_blank" rel="noopener">Consumer Reports — R2 road test</a> · <a href="https://electrek.co/2026/04/06/rivian-r2-epa-numbers-out-217-kw-dc-charge-up-to-335mi-range-heat-pump/" target="_blank" rel="noopener">Electrek — EPA numbers</a> · <a href="https://www.caranddriver.com/rivian/r2" target="_blank" rel="noopener">Car and Driver — R2</a></p>
+  </div>
+</div>
+
+
+<hr class="div">
+
+<!-- ANALYSIS GAPS -->
+<div class="section container" id="gaps">
+  <div class="sec-label">Still worth validating before you sign</div>
+  <div class="sec-title">What This Analysis Doesn’t Yet Cover</div>
+  <div class="cards4">
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Insurance &amp; total cost of ownership</strong><br>Get quotes for each VIN trim in Truckee — EV SUVs vary widely by carrier and repair cost assumptions.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Depreciation &amp; resale</strong><br>Rivian and new platforms carry more uncertainty than BMW/Volvo lease residuals. Cash buyers bear full depreciation.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Service network</strong><br>Bill Pearce BMW (Reno) for iX3 · Volvo Sacramento/Roseville for EX60 · Rivian mobile service + fewer brick-and-mortar sites in Tahoe.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Tires &amp; wheels</strong><br>Your builds use 20" wheels — winter tire packages, range impact of all-terrain (R2), and replacement costs not modeled here.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Crash tests</strong><br>2027 iX3 / EX60 may lack full IIHS/NHTSA ratings at order time — Volvo historically strong; verify when published.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Software &amp; OTA</strong><br>Pilot Assist / Driving Assistant Pro behavior on I-80 still beta-territory — test on delivery, read owner forums after launch.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Home electrical</strong><br>19.2 kW Volvo charging may need panel upgrade — get electrician quote before assuming 4.7 hr home fills.
+    </div></div>
+    <div class="card"><div class="card-body" style="font-size:.82rem">
+      <strong>Real-owner winter data</strong><br>Our winter range uses published coefficients + Tahoe weather — few owners have run Truckee→Steamboat in Feb in these exact cars yet.
+    </div></div>
+  </div>
+</div>
 
 <!-- PROS & CONS -->
 <div class="section container" id="proscons">
@@ -1119,7 +1264,7 @@ function showSeason(s){
       <div class="brand-lbl r">Rivian R2 Performance</div>
       <div class="proscons">
         <div class="pros-box"><div class="pc-head">Pros</div><ul class="pc-list">
-          <li>Only US-built option — OBBBA loan deduction (~$1,760/yr) unavailable on iX3 or EX60</li>
+          <li>Lowest cash entry price (~$58k) — but weakest on your #1 priority (range/charging)</li>
           <li>Best home charging efficiency: 38 mi/hr on same 11.5 kW wall charger (more efficient per kWh)</li>
           <li>Delivers now — no Discovery-replacement gap</li>
           <li>Best cargo and adventure capability: 9.6" clearance, tow hooks, all-terrain mode, frunk, 90 cu ft</li>
@@ -1149,7 +1294,7 @@ function showSeason(s){
           <li>V2H/V2G/V2L bidirectional — backup power for Truckee grid outages</li>
         </ul></div>
         <div class="cons-box"><div class="pc-head">Cons</div><ul class="pc-list">
-          <li>Most expensive: $62,850, no OBBBA deduction, no US assembly advantage</li>
+          <li>Highest cash price here ($70,501) — justified by best range/charging per dollar</li>
           <li>Fall 2026 delivery — months without your Discovery replacement</li>
           <li>Only one US trim at launch; budget xDrive 40 not until 2027</li>
           <li>Less adventure-capable: lower clearance, no off-road modes vs R2</li>
@@ -1172,7 +1317,7 @@ function showSeason(s){
         <div class="cons-box"><div class="pc-head">Cons</div><ul class="pc-list">
           <li>V3 Supercharger cap (~150 kW) is meaningful on I-80 Nevada — must plan for EA/IONNA</li>
           <li>322-mile range is tightest of the four in winter (258 mi at 20°F)</li>
-          <li>No OBBBA loan deduction (Sweden-built)</li>
+          <li>Sweden-built — no US tax perks (irrelevant for cash purchase)</li>
           <li>SF–Truckee round trip (380 mi) requires at least one charge stop in winter</li>
         </ul></div>
       </div>
@@ -1193,7 +1338,7 @@ function showSeason(s){
           <li>Not available yet — late 2026 delivery</li>
           <li>Can't be ordered or configured today</li>
           <li>Same V3 Supercharger cap (~150 kW) as P10 — must plan EA stations on Nevada segment</li>
-          <li>No OBBBA deduction (Sweden-built)</li>
+          <li>Sweden-built — no US tax perks (irrelevant for cash purchase)</li>
         </ul></div>
       </div>
     </div>
@@ -1206,43 +1351,50 @@ function showSeason(s){
 <div class="section container" id="compare">
   <div class="sec-label">Head-to-Head — Configured pricing</div>
   <div class="sec-title">Side-by-Side: All Four Cars</div>
+  <div class="winner-legend">
+    <span>Row winner:</span>
+    <span class="wl wl-r">Rivian R2</span>
+    <span class="wl wl-b">BMW iX3</span>
+    <span class="wl wl-p10">Volvo P10</span>
+    <span class="wl wl-p12">Volvo P12</span>
+    <span style="opacity:.7">— highlighted cell = best for that row</span>
+  </div>
+
   <div class="cw">
     <table class="ct">
       <thead>
         <tr><th style="width:20%">Category</th><th class="rh" style="width:20%">Rivian R2</th><th class="bh" style="width:20%">BMW iX3</th><th class="p10h" style="width:20%">EX60 P10</th><th class="p12h" style="width:20%">EX60 P12</th></tr>
       </thead>
       <tbody>
-        <tr><td class="cat" colspan="5">Pricing — Base vs Configured (with tow hitch, roof bars, heated rear seats, multifunction front seats, rear climate, non-standard paint, 20" wheels, sunroof/electrochromic roof, standard premium audio)</td></tr>
-        <tr><td>Base price (inc. dest.)</td><td class="win r">$57,990 (Perf.)</td><td>$62,850</td><td>$62,145 (Plus) / $70,140 (Ultra)</td><td class="dim">~$69–76k est.</td></tr>
-        <tr><td><strong>Configured price (your spec)</strong></td><td class="dim">TBC — configurator pending</td><td class="win b">$69,981 ✓ confirmed PDF</td><td class="win p10">$68,560 ✓ confirmed PDF</td><td class="dim">$72,500</td></tr>
-        <tr><td>Roof bars in build?</td><td class="dim">No — add at dealer</td><td class="win p10">Yes ($520)</td><td class="win p12">Yes ($520)</td></tr>
-        <tr><td>Premium over R2 Performance (configured)</td><td class="win r">Baseline $57,990</td><td class="dim">+$12.0k over R2</td><td class="dim">+$10.6k over R2</td><td class="dim">+$14.5k over R2</td></tr>
-        <tr><td>OBBBA loan deduction (3 yrs @ 22% bracket)</td><td class="win r">~$5,280 saving (US-built)</td><td class="dim">✗ Not eligible</td><td class="dim">✗ Not eligible</td><td class="dim">✗ Not eligible</td></tr>
-        <tr><td><strong>Effective cost after OBBBA (financed)</strong></td><td class="win r">~$52,710 effective</td><td class="dim">$69,981 (no relief)</td><td class="dim">~$68,560 (no relief)</td><td class="dim">$72,500 (no relief)</td></tr>
-        <tr><td>Price gap vs R2 after OBBBA</td><td class="win r">—</td><td class="dim">~$17,270 more</td><td class="dim">~$15,850 more</td><td class="dim">~$19,790 more</td></tr>
-        <tr><td>Key options already included in base</td><td class="dim">No full configurator yet</td><td class="dim">Most require add-ons at extra cost</td><td class="win p10">Nearly all included in Ultra trim</td><td class="win p12">Same as P10 Ultra</td></tr>
+        <tr><td class="cat" colspan="5">Cash pricing — your configured builds (PDF May 2026)</td></tr>
+        <tr><td><strong>Cash price (your build)</strong></td><td class="dim">~$57,990+ (TBC options)</td><td class="win b">$70,501 ✓ <span class="best">incl. crossbars</span></td><td class="win p10">$68,560 ✓ <span class="best">Lowest cash</span></td><td>$72,500</td></tr>
+        <tr><td>Crossbars / roof bars</td><td class="dim">Integrated rack design</td><td class="win b">$520 (in total)</td><td class="win p10">$520 ✓ in PDF</td><td class="tie">$520 (assumed)</td></tr>
+        <tr><td>$/EPA mile (cash)</td><td>~$173/mi</td><td class="win b">~$162/mi <span class="best">Winner</span></td><td>~$213/mi</td><td>~$181/mi</td></tr>
+        <tr><td>Premium over R2 (cash)</td><td class="win r">Baseline</td><td>+$12,511</td><td>+$10,570</td><td>+$14,510</td></tr>
+        <tr><td>OBBBA loan deduction</td><td class="tie" colspan="4">N/A — paying cash</td></tr>
+        <tr><td>Key options already included in base</td><td class="dim">No full configurator yet</td><td class="dim">Most require add-ons at extra cost</td><td class="win p10">Plus build — options in PDF</td><td class="tie">Same spec assumed</td></tr>
         <tr><td>Order/configure today</td><td class="win r">✓ Delivering now</td><td>✓ Reserve + $1k deposit</td><td class="win p10">✓ Orders open</td><td class="dim">✗ Not yet</td></tr>
         <tr><td class="cat" colspan="5">Range in Conditions</td></tr>
-        <tr><td>EPA range (nominal)</td><td>335 mi</td><td class="win b">434 mi</td><td>322 mi</td><td>400 mi</td></tr>
-        <tr><td>July range (89–93°F NV, A/C on)</td><td class="dim">~295–310 mi</td><td class="win b">~370–385 mi</td><td class="dim">~285–300 mi</td><td>~355–370 mi</td></tr>
-        <tr><td>February range (20°F, cabin heat)</td><td class="dim">~245–260 mi</td><td class="win b">~315–335 mi</td><td class="dim">~240–255 mi</td><td>~295–315 mi</td></tr>
-        <tr><td>SF round trip (380 mi) without charging — winter</td><td class="dim">No — needs charge</td><td class="win b">Yes — comfortably</td><td class="dim">No — insufficient</td><td class="win p12">Yes — just about</td></tr>
+        <tr><td>EPA range (nominal)</td><td>335 mi</td><td class="win b">434 mi <span class="best">Winner</span></td><td>322 mi</td><td>400 mi</td></tr>
+        <tr><td>July range (89–93°F NV, A/C on)</td><td class="dim">~295–310 mi</td><td class="win b">~370–385 mi <span class="best">Winner</span></td><td class="dim">~285–300 mi</td><td>~355–370 mi</td></tr>
+        <tr><td>February range (20°F, cabin heat)</td><td class="dim">~245–260 mi</td><td class="win b">~315–335 mi <span class="best">Winner</span></td><td class="dim">~240–255 mi</td><td>~295–315 mi</td></tr>
+        <tr><td>SF round trip (380 mi) without charging — winter</td><td class="dim">No — needs charge</td><td class="win b">Yes <span class="best">Winner</span></td><td class="dim">No — insufficient</td><td class="win p12">Yes — just about</td></tr>
         <tr><td class="cat" colspan="5">DC Fast Charging</td></tr>
-        <tr><td>Peak DC kW</td><td class="dim">210 kW</td><td class="win b">400 kW</td><td>370 kW</td><td>370 kW</td></tr>
-        <tr><td>10–80% time</td><td class="dim">~29 min</td><td>~20 min</td><td class="win p10">~16 min</td><td>~19 min</td></tr>
+        <tr><td>Peak DC kW</td><td class="dim">210 kW</td><td class="win b">400 kW <span class="best">Winner</span></td><td>370 kW</td><td>370 kW</td></tr>
+        <tr><td>10–80% time</td><td class="dim">~29 min</td><td>~20 min</td><td class="win p10">~16 min <span class="best">Winner</span></td><td>~19 min</td></tr>
         <tr><td>V3 Supercharger (I-80 Nevada) speed</td><td class="win r">Full speed — 400V native</td><td>Good — 400/800V split</td><td class="dim">Capped ~150 kW</td><td class="dim">Capped ~150 kW</td></tr>
         <tr><td class="cat" colspan="5">Steamboat Trip — July / February</td></tr>
-        <tr><td>Charge stops · July / Feb</td><td class="dim">4 / 5</td><td class="win b">2 / 3</td><td>3 / 4–5</td><td class="win p12">2 / 3</td></tr>
-        <tr><td>Total charge time · July / Feb</td><td class="dim">~100 / ~140 min</td><td class="win b">~39 / ~70 min</td><td>~48 / ~100 min</td><td class="win p12">~39 / ~75 min</td></tr>
+        <tr><td>Charge stops · July / Feb</td><td class="dim">4 / 5</td><td class="win b">2 / 3 <span class="best">Winner</span></td><td class="dim">3 / 4–5</td><td class="tie">2 / 3 (tie w/ BMW)</td></tr>
+        <tr><td>Total charge time · July / Feb</td><td class="dim">~100 / ~140 min</td><td class="win b">~39 / ~70 min <span class="best">Winner</span></td><td class="dim">~48 / ~100 min</td><td class="tie">~39 / ~75 min</td></tr>
         <tr><td>Self-driving / Highway Assist</td><td class="dim">Not at launch</td><td class="win b">✓ $2,500 Driving Asst Pro (incl. in build)</td><td>Pilot Assist L2 std</td><td>Pilot Assist L2 std</td></tr>
-        <tr><td>Tow hitch (capacity)</td><td>Up to 4,400 lb (std)</td><td class="win b">$750 option · 4,400 lb</td><td>~$975 est. · 4,500 lb</td><td class="win p12">~$975 est. · 4,500 lb</td></tr>
-        <tr><td>Roof bars</td><td>Design-integrated (std)</td><td>$520 option</td><td>~$500 est.</td><td>~$500 est.</td></tr>
+        <tr><td>Tow hitch (capacity)</td><td>Up to 4,400 lb (std)</td><td class="win b">$750 · 4,400 lb</td><td class="win p10">$2,070 · 4,500 lb</td><td class="tie">$2,070 · 4,500 lb</td></tr>
+        <tr><td>Roof bars</td><td class="win r">Integrated <span class="best">Winner</span></td><td class="win b">$520 (in $70,501)</td><td class="win p10">$520 in PDF</td><td class="tie">$520 assumed</td></tr>
         <tr><td class="cat" colspan="5">Family & Practicality</td></tr>
-        <tr><td>Child safety</td><td>Good — LATCH, AWD</td><td>Very good</td><td class="win p10">Best — multi-adaptive belt</td><td class="win p12">Best — same as P10</td></tr>
-        <tr><td>Heated rear seats</td><td>TBC via configurator</td><td>$500 option (incl. in build)</td><td class="win p10">Std in Ultra (incl. in build)</td><td class="win p12">Std in Ultra (incl. in build)</td></tr>
-        <tr><td>Electrochromic / panoramic roof</td><td>TBC</td><td>In Comfort Pkg ($1,500, incl.)</td><td class="win p10">Electrochromic — std in Ultra</td><td class="win p12">Electrochromic — std in Ultra</td></tr>
-        <tr><td>Sound system (configured)</td><td>TBC</td><td>Harman Kardon 365W (in Tech Pkg)</td><td class="win p10">B&amp;W 28-speaker (std in Ultra)</td><td class="win p12">B&amp;W 28-speaker (std in Ultra)</td></tr>
-        <tr><td>Voice AI</td><td>Rivian voice</td><td>BMW IPA + Alexa</td><td class="win p10">Google Gemini</td><td class="win p12">Google Gemini</td></tr>
+        <tr><td>Child safety</td><td>Good — LATCH, AWD</td><td>Very good</td><td class="win p10">Best — multi-adaptive belt <span class="best">Winner</span></td><td class="tie">Same as P10</td></tr>
+        <tr><td>Heated rear seats</td><td>TBC via configurator</td><td>$500 option (incl. in build)</td><td class="win p10">Climate pkg (in build) <span class="best">Winner</span></td><td class="tie">Climate pkg (assumed)</td></tr>
+        <tr><td>Electrochromic / panoramic roof</td><td>TBC</td><td>In Comfort Pkg ($1,500, incl.)</td><td class="win p10">$950 opt (in build)</td><td class="tie">Same opt</td></tr>
+        <tr><td>Sound system (configured)</td><td>TBC</td><td>Harman Kardon 365W (in Tech Pkg)</td><td>Bose (Plus std)</td><td class="tie">Bose (Plus)</td></tr>
+        <tr><td>Voice AI</td><td>Rivian voice</td><td>BMW IPA + Alexa</td><td class="win p10">Google Gemini <span class="best">Winner</span></td><td class="tie">Google Gemini</td></tr>
         <tr><td>Cargo + dog space</td><td class="win r">90.1 cu ft + frunk</td><td>Good — no frunk</td><td>64.3 cu ft folded</td><td>64.3 cu ft folded</td></tr>
         <tr><td>Snow / off-road capability</td><td class="win r">AWD + 9.6" + all-terrain</td><td>AWD, lower clearance</td><td>AWD, adequate</td><td>AWD, adequate</td></tr>
         <tr><td class="cat" colspan="5">Availability</td></tr>
@@ -1259,126 +1411,101 @@ function showSeason(s){
   <div class="sec-label">For your specific situation — with real configured prices</div>
   <div class="sec-title">Verdict — Four Cars, One Family</div>
 
-  <!-- Price reality check -->
+
+  <div class="alert alert-blu" style="margin-bottom:1.25rem;">
+    <div class="alert-hd">How we're deciding</div>
+    Priority #1: <strong>range + charging</strong> on your Truckee → Steamboat / SF routes. Priority #2: brand, safety, quality. Priority #3: <strong>value for capability</strong> at cash prices — not cheapest sticker.
+  </div>
+
   <div style="background:var(--text);color:#fff;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;">
-    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.875rem;letter-spacing:-.01em;">The configured price reality — confirmed from official PDFs (May 19, 2026)</div>
-    <div style="background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.3);border-radius:8px;padding:.875rem;margin-bottom:.875rem;font-size:.83rem;">
-      <strong style="color:#FFD700;">🎯 Major finding:</strong> The BMW iX3 ($69,981) and Volvo EX60 P10 ($68,560) differ by <strong style="color:#FFD700;">$1,421 — Volvo P10 is cheaper at $68,560 vs BMW $69,981</strong>. Your Volvo build already includes roof bars ($520); the BMW does not. The BMW includes Driving Assistance Pro ($2,500) and more EPA range; the Volvo includes Pilot Assist, booster cushions, and Google Gemini at lower cost.
-    </div>
+    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.875rem;">Cash prices (configured, May 2026)</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;">
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rm);margin-bottom:.3rem;">Rivian R2</div>
-        <div style="font-size:1.3rem;font-weight:700;color:#6FCF80;">$57,990</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Base (configured TBC)</div>
-        <div style="font-size:.78rem;color:#6FCF80;margin-top:.4rem;font-weight:500;">~$52,710 effective</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.4);">after OBBBA ~$5,280</div>
+        <div style="font-size:1.3rem;font-weight:700;color:#6FCF80;">~$58k+</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Base · options TBC</div>
       </div>
-      <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
-        <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#7EC3F7;margin-bottom:.3rem;">BMW iX3</div>
-        <div style="font-size:1.3rem;font-weight:700;color:#7EC3F7;">$69,981</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Confirmed PDF · no roof rack</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.4rem;">No OBBBA relief</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$17.3k over R2 after OBBBA</div>
+      <div style="background:rgba(77,130,200,.25);border:2px solid #7EC3F7;border-radius:8px;padding:.875rem;">
+        <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#7EC3F7;margin-bottom:.3rem;">BMW iX3 ★ Pick</div>
+        <div style="font-size:1.3rem;font-weight:700;color:#7EC3F7;">$70,501</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.7);margin-top:.25rem;">PDF + $520 crossbars</div>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#89B8E8;margin-bottom:.3rem;">EX60 P10</div>
         <div style="font-size:1.3rem;font-weight:700;color:#89B8E8;">$68,560</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Confirmed PDF · bars included</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.4rem;">No OBBBA relief</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$15.9k over R2 after OBBBA</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Best $ if range OK</div>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#C89EE8;margin-bottom:.3rem;">EX60 P12</div>
         <div style="font-size:1.3rem;font-weight:700;color:#C89EE8;">$72,500</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Your $72,500 assumption</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.4rem;">No OBBBA relief</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$19.8k over R2 after OBBBA</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Volvo + max range</div>
       </div>
     </div>
-    <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.75rem;">Configured spec: tow hitch · roof bars · heated rear seats · multifunction front seats · rear climate · non-standard metallic paint · 20" wheels · panoramic/electrochromic roof · standard premium audio · Highway Assist (BMW only)</div>
   </div>
 
-  <!-- P10 vs P12 callout — updated with real numbers -->
-  <div class="alert alert-warn" style="margin-bottom:1.25rem;">
-    <div class="alert-hd">P10 vs P12 — with confirmed P10 price, the gap is now clearer</div>
-    Your confirmed P10 Plus build is $68,560. The P12 Plus equivalent is estimated at $72,500 — a <strong>~$3,940 real-money gap</strong> for the same spec. What you buy with that $3,940: 78 more EPA miles, winter range jumping from ~248 mi to ~305 mi effective (enough for a Jan Truckee–SF round trip without charging), and 167 more horsepower. The P10 also charges faster per stop (16 min vs 19 min). If the SF winter round trip is a genuine monthly need, the P12 premium is defensible. If you'll accept a 16-min charge stop on January SF returns, the P10 saves you ~$3,940 and charges faster every time.
+  <div class="pick-box">
+    <h3>Our recommendation: BMW iX3 — $70,501 cash (your build + crossbars)</h3>
+    <p style="font-size:.88rem;line-height:1.65;color:var(--text);">Given your stated priorities, the <strong>BMW iX3</strong> is the clearest overall choice. It wins on what you care about most: <strong>best EPA and winter range</strong> (434 / ~325 mi), <strong>fewest Steamboat charge stops</strong> (2 summer / 3 winter), <strong>400 kW peak charging</strong> on Electrify America, and <strong>best dollars per mile of range</strong> (~$162/EPA mi). Reviews (Car and Driver, The Drive, Consumer Reports) describe it as BMW's best EV yet on the new 800V Neue Klasse platform. Driving Assistance Pro is already in your build for highway trips.</p>
+    <p style="font-size:.84rem;margin-top:.5rem;color:var(--muted);"><strong>Trade-offs you accept:</strong> Fall 2026 delivery · no integrated booster cushions · no Google Gemini · Bill Pearce BMW Reno for service · ~$1,941 more than Volvo P10.</p>
+    <div class="pick-alt">
+      <strong>Choose Volvo EX60 P12 ($72,500)</strong> if you want nearly the same road-trip range/charging profile but <strong>Volvo safety</strong> (multi-adaptive belt, booster cushions, Gemini) and can wait until late 2026 — worth the extra ~$2k over BMW for winter SF no-stop trips + ski box range.
+    </div>
+    <div class="pick-alt" style="border-color:var(--p10);margin-top:.5rem;">
+      <strong>Choose Volvo EX60 P10 ($68,560)</strong> if <strong>cash savings</strong> and <strong>fastest charge stops (16 min)</strong> matter more than winter highway range — best family features per dollar, but plan an extra stop (or a charge) on cold SF/Steamboat legs.
+    </div>
+    <div class="pick-alt" style="border-color:var(--r);margin-top:.5rem;">
+      <strong>Choose Rivian R2 (~$58k)</strong> only if you need a car <em>now</em> and will mostly tolerate <strong>more, longer charge stops</strong> — it does not match your #1 priority unless price overrides everything.
+    </div>
   </div>
 
-  <div class="vgrid">
+  <div class="vgrid" style="margin-top:1.25rem">
     <div class="vc r">
-      <div class="vc-badge">Rivian R2 · $57,990 base (~$52,710 effective)</div>
-      <div class="vc-title">Best value by a wide margin — if you finance it</div>
-      <div class="vc-text">The OBBBA deduction makes the R2 a fundamentally different financial proposition. At ~$52,710 effective after 3 years of loan interest deductions, it sits ~$17–26k below the configured European cars. It delivers now, has the best snow capability (9.6" clearance, all-terrain AWD) for Truckee winters, the most cargo for dog + toddler + gear, and full V3 Supercharger speed throughout I-80 Nevada. The 29-min charge stops add ~40–50 min to a Steamboat trip vs the Volvos — real but manageable with a toddler's bathroom cadence. The case gets stronger the more you finance.</div>
-      <div class="sc-sec">
-        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill r" style="width:98%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill r" style="width:96%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Road trips</span><div class="sc-track"><div class="sc-fill r" style="width:60%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Charge speed</span><div class="sc-track"><div class="sc-fill r" style="width:38%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Winter range</span><div class="sc-track"><div class="sc-fill r" style="width:60%"></div></div></div>
-      </div>
+      <div class="vc-badge">Rivian R2</div>
+      <div class="vc-title">#4 for your priorities</div>
+      <div class="vc-text">Wins V3 Supercharger access and delivery today, but ranks last on range-per-stop and DC speed for I-80→Steamboat. Cash savings vs BMW (~$12.5k) don't offset ~60+ extra minutes charging per CO round trip vs iX3/P12.</div>
     </div>
-    <div class="vc b">
-      <div class="vc-badge">BMW iX3 · $69,981 confirmed PDF</div>
-      <div class="vc-title">Best range — but $1,421 more than the Volvo P10</div>
-      <div class="vc-text">At $69,981 confirmed from your PDF build, the iX3 is $1,421 more than the Volvo P10 ($68,560), which already includes roof bars. What you get for that is the best range of any car here (434 mi EPA, 325–335 mi winter), fewest Steamboat charge stops, and fastest DC charging at 400 kW on EA. The trade-offs vs Volvo: no Google Gemini AI, no multi-adaptive belt, no daughter booster seat integration, Driving Assistance Pro ($2,500) is already in your BMW build. Falls 2026 delivery.</div>
+    <div class="vc b" style="border-width:3px">
+      <div class="vc-badge">BMW iX3 · $70,501 · ★ Recommended</div>
+      <div class="vc-title">#1 range + road-trip charging</div>
+      <div class="vc-text">Best all-around on your #1 and #3 criteria. Weakest vs Volvos on toddler-specific safety hardware and AI. Strong press reviews; verify Fall 2026 delivery slot with Bill Pearce BMW.</div>
       <div class="sc-sec">
-        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill b" style="width:88%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill b" style="width:82%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Road trips</span><div class="sc-track"><div class="sc-fill b" style="width:97%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Charge speed</span><div class="sc-track"><div class="sc-fill b" style="width:82%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Winter range</span><div class="sc-track"><div class="sc-fill b" style="width:95%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Range</span><div class="sc-track"><div class="sc-fill b" style="width:98%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Charging</span><div class="sc-track"><div class="sc-fill b" style="width:90%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Safety/family</span><div class="sc-track"><div class="sc-fill b" style="width:72%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Cash value</span><div class="sc-track"><div class="sc-fill b" style="width:95%"></div></div></div>
       </div>
     </div>
     <div class="vc p10">
-      <div class="vc-badge">EX60 P10 Plus · $68,560 confirmed PDF (bars incl.)</div>
-      <div class="vc-title">Best family car — and $1,421 less than the BMW</div>
-      <div class="vc-text">At $68,560 confirmed from your saved build, the P10 Plus is $1,421 less than the BMW — still close in price ($1,421 less than BMW). What tips it for a family with a toddler: Google Gemini AI built-in, multi-adaptive front safety belt (world first), integrated rear booster cushions for your daughter, air purification, 16-min charge stops (fastest of all four), heat pump, and available summer 2026. Bose sound system (not B&W) and Nordico upholstery (not Nappa) reflect the Plus trim — both are good, just not the Ultra tier. The V3 cap on I-80 Nevada (~150 kW) means plan EA at Elko + SLC for full charging speed.</div>
+      <div class="vc-badge">EX60 P10 · $68,560</div>
+      <div class="vc-title">#2 family · #3 range</div>
+      <div class="vc-text">Fastest single charge stop (16 min) and best child-focused features. Loses on winter range and V3 cap (~150 kW on Nevada Superchargers) — route via EA for full speed.</div>
       <div class="sc-sec">
-        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill p10" style="width:88%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill p10" style="width:97%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Road trips</span><div class="sc-track"><div class="sc-fill p10" style="width:87%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Charge speed</span><div class="sc-track"><div class="sc-fill p10" style="width:92%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Winter range</span><div class="sc-track"><div class="sc-fill p10" style="width:60%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Range</span><div class="sc-track"><div class="sc-fill p10" style="width:62%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Charging</span><div class="sc-track"><div class="sc-fill p10" style="width:88%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Safety/family</span><div class="sc-track"><div class="sc-fill p10" style="width:98%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Cash value</span><div class="sc-track"><div class="sc-fill p10" style="width:78%"></div></div></div>
       </div>
     </div>
     <div class="vc p12">
-      <div class="vc-badge">EX60 P12 Plus · $72,500 · ~$3,940 over P10</div>
-      <div class="vc-title">Strongest winter range Volvo — justified for ski trip + roof box combo</div>
-      <div class="vc-text">At $72,500 (same Plus-based spec as your P10 build), the P12 is ~$3,940 more than the P10. What you buy: 400 mi EPA (vs 322), ~305 mi in February cold (vs ~248), and critically — with a loaded Thule roof box in February, the P12 gives ~252 effective miles vs ~203 for the P10. That's the difference between comfortable Steamboat stages and stressful ones. Charges slightly slower (19 vs 16 min), same safety features, same Google Gemini. Not yet orderable — late 2026 delivery.</div>
+      <div class="vc-badge">EX60 P12 · $72,500</div>
+      <div class="vc-title">#2 range · best Volvo</div>
+      <div class="vc-text">The compromise if you want BMW-class winter range with Volvo safety — only ~$2k over BMW, $3,940 over P10. Slightly slower stops than P10 (19 vs 16 min). Not orderable yet.</div>
       <div class="sc-sec">
-        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill p12" style="width:68%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill p12" style="width:97%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Road trips</span><div class="sc-track"><div class="sc-fill p12" style="width:93%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Charge speed</span><div class="sc-track"><div class="sc-fill p12" style="width:78%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Winter range</span><div class="sc-track"><div class="sc-fill p12" style="width:84%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Range</span><div class="sc-track"><div class="sc-fill p12" style="width:92%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Charging</span><div class="sc-track"><div class="sc-fill p12" style="width:82%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Safety/family</span><div class="sc-track"><div class="sc-fill p12" style="width:98%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Cash value</span><div class="sc-track"><div class="sc-fill p12" style="width:85%"></div></div></div>
       </div>
     </div>
   </div>
 
-  <!-- UPDATED DECISION TREE -->
-  <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1.25rem;margin-top:1.5rem;font-size:.84rem;line-height:1.8;">
-    <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.875rem;font-size:.95rem;">The decision tree — with confirmed prices from official PDFs</div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-      <div>
-        <p style="margin-bottom:.5rem;"><strong>BMW vs Volvo P10 — Volvo is $1,421 cheaper.</strong><br>→ At $69,981 vs $68,560, the Volvo is cheaper and already has roof bars in the build. The choice is now purely about what matters most: BMW = more range + winter buffer + fewer road trip stops. Volvo = better child safety + Google Gemini AI + faster charge stops + available sooner.</p>
-        <p style="margin-bottom:.5rem;"><strong>Do you finance the purchase and earn under $200K (MFJ)?</strong><br>→ The R2 at ~$52,710 effective is ~$14–15k cheaper than BMW or Volvo P10 after OBBBA. That's still a large and meaningful gap. R2 becomes the strong default if adventure capability and value dominate.</p>
-        <p style="margin-bottom:.5rem;"><strong>Is the monthly SF Bay round trip in January without charging a hard requirement?</strong><br>→ Only the P12 ($72,500, ~305 mi winter) and iX3 ($69,981, ~325–335 mi winter) can reliably do it. The P10 (~248 mi winter) cannot. Notably the iX3 now costs ~$3.9k less than the P12 for comparable winter range.</p>
-      </div>
-      <div>
-        <p style="margin-bottom:.5rem;"><strong>Do you want the car now — not fall/late 2026?</strong><br>→ R2 (delivering now) or P10 Plus (summer 2026). iX3 doesn't land until Fall 2026; P12 late 2026.</p>
-        <p style="margin-bottom:.5rem;"><strong>Does the Thule roof box on ski trips shift the P10 vs P12 decision?</strong><br>→ Yes materially. P10 + loaded box in February = ~203 mi effective range. P12 + box = ~252 mi. That extra 50 miles removes the need for a cautious extra stop in Nevada. If you use the box on every Steamboat trip, the P12 case strengthens.</p>
-        <p><strong>Is the self-driving highway assist worth $2,500 extra on the BMW?</strong><br>→ It is already in your BMW build ($2,500 included). The Volvo has Pilot Assist standard at no extra cost.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:1rem;padding:1rem;background:var(--bg);border-radius:8px;border-left:3px solid var(--p10);">
-      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--p10);margin-bottom:.4rem;">Overall recommendation — EX60 P10 Plus at $68,560</div>
-      <div style="font-size:.82rem;line-height:1.7;color:var(--text);">Now that the confirmed PDF prices are in, the Volvo P10 ($68,560) undercuts the BMW ($69,981) by $1,421. The P10 wins on family grounds: Google Gemini AI, multi-adaptive safety belt, integrated booster seat for your daughter, fastest charge stops (16 min), air purification, and available summer 2026. The BMW wins on range and winter buffer — if those matter more to you, you pay $1,421 more for range and winter buffer.<br><br>
-      <strong>Specific scenario upgrades:</strong> If you do SF in January monthly without stopping → consider iX3 ($1,421 more than P10, much better winter range) or P12 (~$3,940 more). If you finance and qualify for OBBBA → R2 at ~$52,710 effective is ~$15k cheaper and available now. If ski trips always mean Thule box in February → P12 removes the tight range anxiety that the P10 has with a loaded roof box in Nevada cold.</div>
-    </div>
+  <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1.25rem;margin-top:1.25rem;font-size:.84rem;line-height:1.8;">
+    <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.75rem;font-size:.95rem;">Quick decision rules</div>
+    <p><strong>Pick BMW iX3</strong> if range + charging speed + fewest stops matter most (your #1) and you can wait until Fall 2026.</p>
+    <p><strong>Pick Volvo P12</strong> if you want the same road-trip story plus Volvo safety/booster/Gemini and January SF without charging is non-negotiable.</p>
+    <p><strong>Pick Volvo P10</strong> if $1,941 less cash than BMW matters and you'll accept extra winter charging — still the best toddler-focused cabin.</p>
+    <p><strong>Skip Rivian R2</strong> unless you need delivery now and accept weaker fast-charging vs the European options.</p>
   </div>
-</div>
 
 <div class="footer">
   <strong>Sources:</strong> BMW iX3 build confirmed from official configurator PDF May 19, 2026 (Build Code FW0885MQ, Bill Pearce BMW Reno) · Volvo EX60 P10 Plus build confirmed from official Volvo configurator PDF May 19, 2026 · Rivian EPA filings (Apr 2026) · Volvo EX60 US pricing (Electrek, InsideEVs, TFLCar, May 2026) · TDPUD Rebate PDF (Jan 2026) · Liberty Utilities website · IRS 30C guidance · Argonne ANL mapping · AAA gas prices May 17–19, 2026 · Supercharger/EA pricing TrendX Insights Q1–Q2 2026 · Xweather EV Range Report · Vaisala weather/range study · IRS OBBBA guidance · Consumer Reports roof box SUV test · Weather data: Weather Atlas, CDOT cotrip.org · Data current May 19, 2026. P12 at $72,500 per your assumption; P10 & BMW from configurator PDFs May 19, 2026.
