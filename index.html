@@ -380,13 +380,13 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
     <span class="wl wl-b">BMW iX3</span>
     <span class="wl wl-p10">Volvo P10</span>
     <span class="wl wl-p12">Volvo P12</span>
-    <span style="opacity:.7">— highlighted cell = best for that row</span>
+    <span style="opacity:.7">— highlighted = clear winner · <em>italic</em> = tie or same</span>
   </div>
 
 
   <div class="alert alert-warn" style="margin-bottom:1.25rem;">
     <div class="alert-hd">Key insight: P12 charges more slowly per stop than P10</div>
-    The P10 and P12 share the same 370 kW peak DC and same NACS port — but the P12's 117 kWh battery (vs 91 kWh usable on P10) takes longer to fill. P12 does 10–80% in ~19 min vs P10's ~16 min. The P10 also averages ~247 kW across the session vs P12's ~215–230 kW. Counterintuitively, the P10 is the faster charger per stop, even though the P12 has more range. For a family with a toddler, more stops with shorter pauses (P10) can actually be preferable to fewer stops with slightly longer waits (P12).
+    The P10 and P12 share the same 370 kW peak DC and same NACS port — but the P12's 117 kWh battery (vs 91 kWh usable on P10) takes longer to fill. P12 does 10–80% in ~19 min vs P10's ~16 min. The P10 also averages ~247 kW across the session vs P12's ~248 kW (similar peak power, bigger pack = longer session). Counterintuitively, the P10 is the faster charger per stop, even though the P12 has more range. For a family with a toddler, more stops with shorter pauses (P10) can actually be preferable to fewer stops with slightly longer waits (P12).
   </div>
 
   <div class="cw">
@@ -402,24 +402,28 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
       </thead>
       <tbody>
         <tr><td class="cat" colspan="5">DC Fast Charging</td></tr>
-        <tr><td>Architecture</td><td class="dim">400V</td><td class="tie">800V class</td><td class="tie">800V true</td><td class="tie">800V true</td></tr>
+        <tr><td>Architecture</td><td class="dim">400V</td><td class="tie">800V class</td><td class="tie">800V (same)</td><td class="tie">800V (same)</td></tr>
         <tr><td>Usable battery</td><td>86.8 kWh</td><td>108.7 kWh <span class="dim">(2nd)</span></td><td>91 kWh</td><td class="win p12">112 kWh <span class="best">Winner</span></td></tr>
-        <tr><td>Peak DC</td><td>210 kW</td><td class="win b">400 kW <span class="best">Winner</span></td><td>370 kW</td><td>370 kW</td></tr>
-        <tr><td><strong>Avg DC 10–80%</strong></td><td class="dim">~129 kW</td><td>~236 kW</td><td class="win p10">~247 kW <span class="best">Winner</span></td><td>~215–230 kW</td></tr>
+        <tr><td>Peak DC</td><td>210 kW</td><td class="win b">400 kW <span class="best">Winner</span></td><td class="tie">370 kW (same)</td><td class="tie">370 kW (same)</td></tr>
+        <tr><td><strong>Avg DC 10–80%</strong></td><td class="dim">~126 kW</td><td>~228 kW</td><td>~239 kW</td><td>~248 kW <span class="dim">(highest avg; bigger pack)</span></td></tr>
         <tr><td><strong>10–80% time</strong></td><td class="dim">~29 min</td><td>~20 min</td><td class="win p10">~16 min <span class="best">Winner</span></td><td>~19 min</td></tr>
-        <tr><td>Miles added in 10 min</td><td>~80 mi</td><td class="win b">~185 mi <span class="best">Winner</span></td><td>~165 mi</td><td>~173 mi</td></tr>
-        <tr><td>Miles per min (10–80%)</td><td class="dim">~8 mi/min</td><td class="win b">~13–14.5 mi/min <span class="best">Winner</span></td><td>~13–14 mi/min</td><td>~12.5–13 mi/min</td></tr>
-        <tr><td>V3 Supercharger (450–500V) speed</td><td class="win r">Full speed — 400V native <span class="best">Winner</span></td><td>Mostly fine — splits to 400V modules</td><td class="dim">Capped ~150 kW</td><td class="dim">Capped ~150 kW</td></tr>
-        <tr><td>On V4 / EA 800V station</td><td class="dim">210 kW max</td><td class="win b">Up to 400 kW <span class="best">Winner</span></td><td class="tie">Up to 370 kW</td><td class="tie">Up to 370 kW</td></tr>
+        <tr><td>Miles added in 10 min (DC)</td><td class="dim">~80 mi</td><td class="win b">~185 mi <span class="best">Winner</span></td><td>~165 mi</td><td>~173 mi</td></tr>
+        <tr><td>Miles per min (10–80%)</td><td class="dim">~8 mi/min</td><td class="tie">~15 mi/min (same)</td><td>~14 mi/min</td><td class="tie">~15 mi/min (same)</td></tr>
+        <tr><td>V3 Supercharger (450–500V) speed</td><td class="win r">Full speed — 400V native <span class="best">Winner</span></td><td>Mostly fine — splits to 400V modules</td><td class="tie">Capped ~150 kW (same)</td><td class="tie">Capped ~150 kW (same)</td></tr>
+        <tr><td>On V4 / EA 800V station</td><td class="dim">210 kW max</td><td class="win b">Up to 400 kW <span class="best">Winner</span></td><td class="tie">Up to 370 kW (same)</td><td class="tie">Up to 370 kW (same)</td></tr>
         <tr><td class="cat" colspan="5">AC Home Charging</td></tr>
-        <tr><td>Onboard AC charger</td><td>11.5 kW (48A, 240V)</td><td>15.4 kW std / 22 kW optional</td><td class="win p10">19.2 kW (80A) <span class="best">Winner</span></td><td class="tie">19.2 kW (tie)</td></tr>
-        <tr><td>Miles/hr (standard 11.5 kW wall)</td><td class="win r">~38 mi/hr (most efficient)</td><td>~29 mi/hr</td><td>~28 mi/hr</td><td>~28 mi/hr</td></tr>
-        <tr><td>Full charge time (at home L2)</td><td>~9 hrs</td><td>~8–9 hrs</td><td>~4.7 hrs at 19.2 kW / ~9 hrs at 11.5 kW</td><td>~5.8 hrs at 19.2 kW / ~11 hrs at 11.5 kW</td></tr>
-        <tr><td>Bidirectional (V2H/V2G)</td><td class="dim">Not confirmed at launch</td><td class="win b">V2L, V2H, V2V, V2G <span class="best">Winner</span></td><td class="tie">V2H prepared</td><td class="tie">V2H prepared</td></tr>
-        <tr><td>Charge port</td><td class="win r">NACS · best V3 speed <span class="best">Winner</span></td><td>NACS + CCS adapter</td><td class="tie">NACS native</td><td class="tie">NACS native</td></tr>
-        <tr><td>Battery preconditioning</td><td>Yes (app + nav)</td><td>Yes (auto on nav to charger)</td><td>Yes (Breathe Charge — up to 30% faster in cold)</td><td>Yes (Breathe Charge)</td></tr>
+        <tr><td>Onboard AC charger</td><td>11.5 kW max (48A, 240V)</td><td>15.4 kW std / 22 kW optional</td><td class="tie">19.2 kW (same)</td><td class="tie">19.2 kW (same)</td></tr>
+        <tr><td>Miles/hr @ 11.5 kW wall (EPA-based)</td><td>~38 mi/hr</td><td class="win b">~39 mi/hr <span class="best">Winner</span></td><td class="tie">~35 mi/hr (same)</td><td class="tie">~35 mi/hr (same)</td></tr>
+        <tr><td>Miles/hr @ max onboard AC</td><td>~38 mi/hr (11.5 cap)</td><td>~52 mi/hr @ 15.4 kW</td><td class="tie">~58 mi/hr @ 19.2 kW (same)</td><td class="tie">~58 mi/hr @ 19.2 kW (same)</td></tr>
+        <tr><td>Full charge 0–100% (home L2)</td><td>~9 hr @ 11.5 kW</td><td>~8 hr @ 15.4 kW · ~11 hr @ 11.5 kW</td><td>~5.5 hr @ 19.2 kW · ~9 hr @ 11.5 kW</td><td>~7 hr @ 19.2 kW · ~11 hr @ 11.5 kW</td></tr>
+        <tr><td>Bidirectional (V2H / V2L / V2G)</td><td class="tie">V2H (~11 kW) + V2L (Field Outlet) — TBC</td><td class="win b">V2L, V2H, V2V, V2G (V2G opt.) <span class="best">Winner</span></td><td class="tie">V2H + V2L (Volvo wallbox/HEMS)</td><td class="tie">V2H + V2L (same)</td></tr>
+        <tr><td>Charge port</td><td class="win r">NACS · best V3 speed <span class="best">Winner</span></td><td class="tie">NACS native (CCS adapter for legacy)</td><td class="tie">NACS native (same)</td><td class="tie">NACS native (same)</td></tr>
+        <tr><td>Battery preconditioning</td><td class="tie">Yes (same)</td><td class="tie">Yes (same)</td><td class="tie">Yes (same)</td><td class="tie">Yes (same)</td></tr>
       </tbody>
     </table>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:.65rem;line-height:1.55;">
+      <strong>AC miles/hr:</strong> EPA range ÷ usable kWh × charger kW × ~85% AC efficiency (0–100% times use the same assumption). Real-world varies with temperature and state of charge. BMW cites ~30 mi/hr on 11&nbsp;kW 3-phase; on a US 48A (11.5&nbsp;kW) circuit the EPA-based estimate is ~39&nbsp;mi/hr. <strong>Ties:</strong> italic cells marked “(same)” — no single winner when values match. <strong>Bidirectional:</strong> Rivian V2H/V2L timelines not finalized; Volvo needs compatible wallbox + HEMS; BMW V2G availability varies by market.
+    </p>
   </div>
 </div>
 
@@ -632,14 +636,15 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
           <tr><th style="width:22%">☀️ July Summary</th><th class="rh">Rivian R2</th><th class="bh">BMW iX3</th><th class="p10h">EX60 P10</th><th class="p12h">EX60 P12</th></tr>
         </thead>
         <tbody>
-          <tr><td>Charge stops</td><td class="dim">4</td><td class="win b">2 <span class="best">Winner</span></td><td>3</td><td class="tie">2 (tie)</td></tr>
-          <tr><td>Total charge time</td><td class="dim">~98–103 min</td><td class="win b">~38–40 min <span class="best">Winner</span></td><td>~48 min</td><td class="tie">~38–40 min (tie)</td></tr>
-          <tr><td>Total trip time</td><td class="dim">~17.5 hrs</td><td class="win b">~15.8 hrs <span class="best">Winner</span></td><td>~16.3 hrs</td><td class="tie">~15.8 hrs (tie)</td></tr>
+          <tr><td>Charge stops</td><td class="dim">4</td><td class="tie">2 (same)</td><td>3</td><td class="tie">2 (same)</td></tr>
+          <tr><td>Total charge time</td><td class="dim">~98–103 min</td><td class="tie">~38–40 min (same)</td><td>~48 min</td><td class="tie">~38 min (same)</td></tr>
+          <tr><td>Total trip time</td><td class="dim">~17.5 hrs</td><td class="tie">~15.8 hrs (same)</td><td>~16.3 hrs</td><td class="tie">~15.8 hrs (same)</td></tr>
           <tr><td>Key heat risk</td><td class="dim">Hot battery on NV arrival may slow charge start 2–3 min</td><td>Low — large battery absorbs heat</td><td class="dim">Tightest range in heat; must use EA at Elko</td><td>Low — P12 handles heat well</td></tr>
-          <tr><td>Best charger network</td><td class="win r">Tesla V3 — full speed throughout</td><td>EA Elko + SLC for 400 kW</td><td class="dim">Must use EA at Elko + SLC (V3 caps P10)</td><td class="dim">Must use EA at Elko + SLC (V3 caps P12)</td></tr>
+          <tr><td>Best charger network</td><td class="win r">Tesla V3 — full speed throughout</td><td>EA Elko + SLC for 400 kW</td><td class="tie">Must use EA at Elko + SLC (same)</td><td class="tie">Must use EA at Elko + SLC (same)</td></tr>
           <tr><td>Toddler rhythm</td><td>4 stops = natural bathroom/snack pace</td><td>2 stops — each a long meal break needed</td><td class="win p10">3 × 16-min stops = ideal toddler cadence</td><td>2 stops — works if toddler-timed well</td></tr>
         </tbody>
       </table>
+      <p style="font-size:.75rem;color:var(--muted);margin-top:.55rem;line-height:1.5;">Charge times = sum of per-stop estimates in the route above. Trip time ≈ 12.6 hr driving (882 mi @ 70 mph) + charging + meal/bathroom breaks.</p>
     </div>
   </div><!-- end july panel -->
 
@@ -728,7 +733,7 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
               <div class="rs-car-box p10"><span class="rs-car-name">P10 ✓ stop</span><span class="rs-car-time">~20 min</span><span class="rs-car-note">Top to 80%+. Next reliable charge is Winnemucca (56 mi).</span></div>
               <div class="rs-car-box p12" style="background:var(--bg);border-color:var(--border);"><span class="rs-car-name" style="color:var(--muted);">P12 — skip</span><span class="rs-car-time" style="color:var(--muted);font-style:italic;">Still ~55%+</span></div>
             </div>
-            <p style="font-size:.75rem;color:#0D2D5C;margin-top:.4rem;background:#E8F0FB;padding:5px 8px;border-radius:5px;">❄️ February-only stop: The R2 and P10 skip Lovelock in July. In February, reduced cold range makes this a necessary top-up before the remote Winnemucca→Elko stretch.</p>
+            <p style="font-size:.75rem;color:#0D2D5C;margin-top:.4rem;background:#E8F0FB;padding:5px 8px;border-radius:5px;">❄️ February-only stop: In February, reduced cold range makes Lovelock a necessary top-up for R2 and P10 (BMW/P12 usually skip it) before the remote Winnemucca→Elko stretch.</p>
           </div>
         </div>
         <div class="route-stop">
@@ -817,19 +822,20 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
           <tr><th style="width:22%">❄️ February Summary</th><th class="rh">Rivian R2</th><th class="bh">BMW iX3</th><th class="p10h">EX60 P10</th><th class="p12h">EX60 P12</th></tr>
         </thead>
         <tbody>
-          <tr><td>Charge stops · Feb</td><td class="dim">5</td><td class="win b">3 <span class="best">Winner</span></td><td>4–5</td><td class="tie">3 (tie)</td></tr>
-          <tr><td>Total charge time</td><td class="dim">~130–150 min</td><td class="win b">~66–75 min</td><td>~90–110 min</td><td>~68–82 min</td></tr>
-          <tr><td>Total trip time (1 day)</td><td class="dim">~18.5–19 hrs</td><td class="win b">~16.5–17 hrs <span class="best">Winner</span></td><td>~17.5–18 hrs</td><td class="tie">~16.5–17 hrs (tie)</td></tr>
+          <tr><td>Charge stops · Feb</td><td class="dim">5</td><td class="tie">3 (same)</td><td>4–5</td><td class="tie">3 (same)</td></tr>
+          <tr><td>Total charge time</td><td class="dim">~140–155 min</td><td class="tie">~66–75 min (similar)</td><td>~98–115 min</td><td class="tie">~68–82 min (similar)</td></tr>
+          <tr><td>Total trip time (1 day)</td><td class="dim">~18.5–19 hrs</td><td class="tie">~16.5–17 hrs (same)</td><td>~17.5–18 hrs</td><td class="tie">~16.5–17 hrs (same)</td></tr>
           <tr><td>Recommended format</td><td class="dim">2 days — overnight Elko strongly advised</td><td>1 day feasible · 2 days comfortable</td><td class="dim">2 days advised — tight winter range</td><td>1 day feasible · 2 days recommended</td></tr>
           <tr><td>Rabbit Ears snow suitability</td><td class="win r">Best — 9.6" clearance, AWD, all-terrain</td><td>Good — AWD, strong range buffer</td><td>Adequate — AWD, must charge to 85%+ in SLC</td><td class="win p12">Good — AWD, best Volvo winter buffer</td></tr>
-          <tr><td>Extra time vs July</td><td class="dim">+40–50 min · +1 stop</td><td>+28–35 min · +1 stop</td><td class="dim">+50–60 min · +1–2 stops</td><td>+30–42 min · +1 stop</td></tr>
+          <tr><td>Extra time vs July</td><td class="dim">+42–52 min · +1 stop</td><td>+28–35 min · +1 stop</td><td class="dim">+50–67 min · +1–2 stops</td><td>+30–44 min · +1 stop</td></tr>
         </tbody>
       </table>
+      <p style="font-size:.75rem;color:var(--muted);margin-top:.55rem;line-height:1.5;">February adds Lovelock for R2/P10 and longer cold-weather sessions. BMW &amp; P12: 3 stops (Winnemucca, Elko, SLC). P10: 5 stops. R2: 5 stops. Trip times assume single-day push; 2-day with overnight Elko is strongly recommended.</p>
     </div>
 
     <div class="alert alert-blu" style="margin-top:1rem;">
       <div class="alert-hd">❄️ February trip verdict</div>
-      The BMW iX3 and EX60 P12 are the most relaxed February drivers — 3 stops, large batteries, comfortable buffers on every cold segment. The R2 is the most capable in actual snow on Rabbit Ears but has the tightest effective range — plan 5 stops and the 2-day format. The P10 requires the most discipline in February: 85%+ at every stop, precondition before every charge session, and don't attempt Rabbit Ears with under 50% leaving SLC. Rabbit Ears Pass in February is a serious mountain road — check CDOT before you leave Salt Lake City.
+      The BMW iX3 and EX60 P12 are the most relaxed February drivers — 3 stops each, ~66–82 min total charging, large batteries, comfortable buffers on every cold segment. The R2 is the most capable in actual snow on Rabbit Ears but has the tightest effective range — plan 5 stops and the 2-day format. The P10 requires the most discipline in February: 85%+ at every stop, precondition before every charge session, and don't attempt Rabbit Ears with under 50% leaving SLC. Rabbit Ears Pass in February is a serious mountain road — check CDOT before you leave Salt Lake City.
     </div>
   </div><!-- end feb panel -->
 
@@ -842,9 +848,9 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
           <tr><th></th><th class="rh">R2 · Jul / Feb</th><th class="bh">iX3 · Jul / Feb</th><th class="p10h">P10 · Jul / Feb</th><th class="p12h">P12 · Jul / Feb</th></tr>
         </thead>
         <tbody>
-          <tr><td>Charge stops</td><td class="dim">4 / 5</td><td class="win b">2 / 3 <span class="best">Winner</span></td><td class="dim">3 / 4–5</td><td class="tie">2 / 3 (tie w/ BMW)</td></tr>
-          <tr><td>Total charge time</td><td class="dim">~100 / ~140 min</td><td class="win b">~39 / ~70 min <span class="best">Winner</span></td><td class="dim">~48 / ~100 min</td><td class="tie">~39 / ~75 min</td></tr>
-          <tr><td>Extra Feb penalty</td><td class="dim">+40–50 min, +1 stop</td><td>+30–35 min, +1 stop</td><td class="dim">+50–60 min, +1–2 stops</td><td>+35–40 min, +1 stop</td></tr>
+          <tr><td>Charge stops</td><td class="dim">4 / 5</td><td class="tie">2 / 3 (same)</td><td class="dim">3 / 4–5</td><td class="tie">2 / 3 (same)</td></tr>
+          <tr><td>Total charge time</td><td class="dim">~98–103 / ~140–155 min</td><td class="tie">~38–40 / ~66–75 min (same)</td><td>~48 / ~98–115 min</td><td class="tie">~38 / ~68–82 min (same)</td></tr>
+          <tr><td>Extra Feb penalty</td><td class="dim">+42–52 min, +1 stop</td><td>+28–35 min, +1 stop</td><td class="dim">+50–67 min, +1–2 stops</td><td>+30–44 min, +1 stop</td></tr>
           <tr><td>Snow capability</td><td class="win r">Best — clearance + all-terrain both months</td><td>Good both months</td><td>Adequate both months</td><td>Good both months</td></tr>
         </tbody>
       </table>
@@ -1264,7 +1270,7 @@ function showSeason(s){
       <div class="proscons">
         <div class="pros-box"><div class="pc-head">Pros</div><ul class="pc-list">
           <li>Lowest cash entry price (~$58k) — but weakest on your #1 priority (range/charging)</li>
-          <li>Best home charging efficiency: 38 mi/hr on same 11.5 kW wall charger (more efficient per kWh)</li>
+          <li>11.5 kW AC cap — ~38 mi/hr on a standard 48A wall; EPA efficiency is strong but pack is smallest here</li>
           <li>Reservations open — long waitlist; delivery date uncertain</li>
           <li>Best cargo and adventure capability: 9.6" clearance, tow hooks, all-terrain mode, frunk, 90 cu ft</li>
           <li>Full V3 Supercharger speed — NACS native, unaffected by voltage mismatch</li>
@@ -1357,7 +1363,7 @@ function showSeason(s){
     <span class="wl wl-b">BMW iX3</span>
     <span class="wl wl-p10">Volvo P10</span>
     <span class="wl wl-p12">Volvo P12</span>
-    <span style="opacity:.7">— highlighted cell = best for that row</span>
+    <span style="opacity:.7">— highlighted = clear winner · <em>italic</em> = tie or same</span>
   </div>
 
   <div class="cw">
@@ -1372,7 +1378,7 @@ function showSeason(s){
         <tr><td>$/EPA mile (cash)</td><td>~$173/mi</td><td class="win b">~$162/mi <span class="best">Winner</span></td><td>~$213/mi</td><td>~$181/mi</td></tr>
         <tr><td>Premium over R2 (cash)</td><td class="win r">Baseline</td><td>+$12,511</td><td>+$10,570</td><td>+$14,510</td></tr>
         <tr><td>OBBBA loan deduction</td><td class="tie" colspan="4">N/A — paying cash</td></tr>
-        <tr><td>Key options already included in base</td><td class="dim">No full configurator yet</td><td class="dim">Most require add-ons at extra cost</td><td class="win p10">Plus build — options in PDF</td><td class="tie">Same spec assumed</td></tr>
+        <tr><td>Key options already included in base</td><td class="dim">No full configurator yet</td><td class="dim">Most require add-ons at extra cost</td><td class="tie">Plus build — options in PDF (same)</td><td class="tie">Same spec as P10 assumed</td></tr>
         <tr><td>Order/configure today</td><td class="dim">✓ Reserve — long waitlist</td><td>✓ Reserve + $1k deposit</td><td class="win p10">✓ Orders open</td><td class="dim">✗ Not yet</td></tr>
         <tr><td class="cat" colspan="5">Range in Conditions</td></tr>
         <tr><td>EPA range (nominal)</td><td>335 mi</td><td class="win b">434 mi <span class="best">Winner</span></td><td>322 mi</td><td>400 mi</td></tr>
@@ -1380,23 +1386,23 @@ function showSeason(s){
         <tr><td>February range (20°F, cabin heat)</td><td class="dim">~245–260 mi</td><td class="win b">~315–335 mi <span class="best">Winner</span></td><td class="dim">~240–255 mi</td><td>~295–315 mi</td></tr>
         <tr><td>SF round trip (380 mi) without charging — winter</td><td class="dim">No — needs charge</td><td class="win b">Yes <span class="best">Winner</span></td><td class="dim">No — insufficient</td><td class="tie">Marginal — just about</td></tr>
         <tr><td class="cat" colspan="5">DC Fast Charging</td></tr>
-        <tr><td>Peak DC kW</td><td class="dim">210 kW</td><td class="win b">400 kW <span class="best">Winner</span></td><td>370 kW</td><td>370 kW</td></tr>
+        <tr><td>Peak DC kW</td><td class="dim">210 kW</td><td class="win b">400 kW <span class="best">Winner</span></td><td class="tie">370 kW (same)</td><td class="tie">370 kW (same)</td></tr>
         <tr><td>10–80% time</td><td class="dim">~29 min</td><td>~20 min</td><td class="win p10">~16 min <span class="best">Winner</span></td><td>~19 min</td></tr>
-        <tr><td>V3 Supercharger (I-80 Nevada) speed</td><td class="win r">Full speed — 400V native</td><td>Good — 400/800V split</td><td class="dim">Capped ~150 kW</td><td class="dim">Capped ~150 kW</td></tr>
+        <tr><td>V3 Supercharger (I-80 Nevada) speed</td><td class="win r">Full speed — 400V native</td><td>Good — 400/800V split</td><td class="tie">Capped ~150 kW (same)</td><td class="tie">Capped ~150 kW (same)</td></tr>
         <tr><td class="cat" colspan="5">Steamboat Trip — July / February</td></tr>
-        <tr><td>Charge stops · July / Feb</td><td class="dim">4 / 5</td><td class="win b">2 / 3 <span class="best">Winner</span></td><td class="dim">3 / 4–5</td><td class="tie">2 / 3 (tie w/ BMW)</td></tr>
-        <tr><td>Total charge time · July / Feb</td><td class="dim">~100 / ~140 min</td><td class="win b">~39 / ~70 min <span class="best">Winner</span></td><td class="dim">~48 / ~100 min</td><td class="tie">~39 / ~75 min</td></tr>
-        <tr><td>Self-driving / Highway Assist</td><td class="dim">Not at launch</td><td class="win b">✓ $2,500 Driving Asst Pro (incl. in build)</td><td>Pilot Assist L2 std</td><td>Pilot Assist L2 std</td></tr>
-        <tr><td>Tow hitch (capacity)</td><td>Up to 4,400 lb</td><td>4,400 lb ($750 opt)</td><td class="win p10">4,500 lb <span class="best">Winner</span></td><td class="tie">4,500 lb</td></tr>
+        <tr><td>Charge stops · July / Feb</td><td class="dim">4 / 5</td><td class="tie">2 / 3 (same)</td><td class="dim">3 / 4–5</td><td class="tie">2 / 3 (same)</td></tr>
+        <tr><td>Total charge time · July / Feb</td><td class="dim">~98–103 / ~140–155 min</td><td class="tie">~38–40 / ~66–75 min (same)</td><td>~48 / ~98–115 min</td><td class="tie">~38 / ~68–82 min (same)</td></tr>
+        <tr><td>Self-driving / Highway Assist</td><td class="dim">Not at launch</td><td class="win b">✓ $2,500 Driving Asst Pro (incl. in build)</td><td class="tie">Pilot Assist L2 std (same)</td><td class="tie">Pilot Assist L2 std (same)</td></tr>
+        <tr><td>Tow hitch (capacity)</td><td>Up to 4,400 lb</td><td>4,400 lb ($750 opt)</td><td class="tie">4,500 lb (same)</td><td class="tie">4,500 lb (same)</td></tr>
         <tr><td>Roof bars</td><td class="win r">Integrated rack <span class="best">Winner</span></td><td class="tie">Crossbars in build</td><td class="tie">Load bars in PDF</td><td class="tie">Assumed in build</td></tr>
         <tr><td class="cat" colspan="5">Family & Practicality</td></tr>
-        <tr><td>Child safety</td><td>Good — LATCH, AWD</td><td>Very good</td><td class="win p10">Multi-adaptive belt + boosters <span class="best">Winner</span></td><td class="tie">Same as P10</td></tr>
-        <tr><td>Heated rear seats</td><td class="dim">TBC</td><td>In build ($500)</td><td class="win p10">Climate pkg ✓ <span class="best">Winner</span></td><td class="tie">Climate pkg ✓</td></tr>
-        <tr><td>Panoramic / electrochromic roof</td><td class="dim">TBC</td><td class="win b">Comfort Pkg (sunroof)</td><td>Electrochromic $950 ✓</td><td class="tie">Same as P10</td></tr>
-        <tr><td>Sound system (configured)</td><td>TBC</td><td>Harman Kardon 365W ($650 in build)</td><td>Bose (Plus std)</td><td class="tie">Bose (Plus)</td></tr>
-        <tr><td>Voice AI</td><td>Rivian voice</td><td>BMW IPA + Alexa</td><td class="win p10">Google Gemini <span class="best">Winner</span></td><td class="tie">Gemini</td></tr>
-        <tr><td>Cargo + dog space</td><td class="win r">90.1 cu ft + frunk</td><td>~62 cu ft + frunk (~58 L)</td><td>64.3 cu ft folded</td><td>64.3 cu ft folded</td></tr>
-        <tr><td>Snow / off-road capability</td><td class="win r">AWD + 9.6" + all-terrain</td><td>AWD, lower clearance</td><td>AWD, adequate</td><td>AWD, adequate</td></tr>
+        <tr><td>Child safety</td><td>Good — LATCH, AWD</td><td>Very good</td><td class="tie">Multi-adaptive belt + boosters (same)</td><td class="tie">Multi-adaptive belt + boosters (same)</td></tr>
+        <tr><td>Heated rear seats</td><td class="dim">TBC</td><td>In build ($500)</td><td class="tie">Yes — in build (same)</td><td class="tie">Yes — in build (same)</td></tr>
+        <tr><td>Panoramic / electrochromic roof</td><td class="dim">TBC</td><td class="win b">Comfort Pkg (sunroof)</td><td class="tie">Electrochromic in build (same)</td><td class="tie">Electrochromic in build (same)</td></tr>
+        <tr><td>Sound system (configured)</td><td>TBC</td><td>Harman Kardon 365W ($650 in build)</td><td class="tie">Bose (Plus std) (same)</td><td class="tie">Bose (Plus std) (same)</td></tr>
+        <tr><td>Voice AI</td><td>Rivian voice</td><td>BMW IPA + Alexa</td><td class="tie">Google Gemini (same)</td><td class="tie">Google Gemini (same)</td></tr>
+        <tr><td>Cargo + dog space</td><td class="win r">90.1 cu ft + frunk</td><td>~62 cu ft + frunk (~58 L)</td><td class="tie">64.3 cu ft folded (same)</td><td class="tie">64.3 cu ft folded (same)</td></tr>
+        <tr><td>Snow / off-road capability</td><td class="win r">AWD + 9.6" + all-terrain</td><td>AWD, lower clearance</td><td class="tie">AWD, adequate (same)</td><td class="tie">AWD, adequate (same)</td></tr>
         <tr><td class="cat" colspan="5">Availability</td></tr>
         <tr><td>Delivery timeline</td><td class="dim">Waitlist (TBC)</td><td class="dim">Fall 2026</td><td>Summer 2026</td><td class="dim">Late 2026</td></tr>
       </tbody>
@@ -1462,7 +1468,7 @@ function showSeason(s){
     <div class="vc r">
       <div class="vc-badge">Rivian R2</div>
       <div class="vc-title">#4 for your priorities</div>
-      <div class="vc-text">Best V3 Supercharger native speed, but ranks last on range-per-stop and DC speed for I-80→Steamboat. Cash savings vs BMW (~$12.5k) don't offset ~60+ extra minutes charging per CO round trip vs iX3/P12.</div>
+      <div class="vc-text">Best V3 Supercharger native speed, but ranks last on range-per-stop and DC speed for I-80→Steamboat. Cash savings vs BMW (~$12.5k) don't offset ~58–70+ extra minutes charging per CO round trip (July) vs iX3/P12.</div>
     </div>
     <div class="vc b" style="border-width:3px">
       <div class="vc-badge">BMW iX3 · $70,501 · ★ Recommended</div>
