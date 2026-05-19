@@ -267,8 +267,8 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
       </div>
       <div class="stat-col">
         <div class="stat-head">BMW iX3</div>
-        <div class="sr"><span class="sl">Your build</span><span class="sv b">$67,100 ✓</span></div>
-        <div class="sr"><span class="sl">+ roof rack</span><span class="sv b">$67,620</span></div>
+        <div class="sr"><span class="sl">Your build</span><span class="sv b">$69,981 ✓</span></div>
+        <div class="sr"><span class="sl">Roof rack</span><span class="sv b">Not in build</span></div>
         <div class="sr"><span class="sl">EPA range</span><span class="sv b">383–434 mi</span></div>
         <div class="sr"><span class="sl">Peak DC</span><span class="sv b">400 kW</span></div>
         <div class="sr"><span class="sl">10–80%</span><span class="sv b">~20 min</span></div>
@@ -277,8 +277,8 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
       </div>
       <div class="stat-col">
         <div class="stat-head">Volvo EX60 P10</div>
-        <div class="sr"><span class="sl">Your build</span><span class="sv p10">$67,265 ✓</span></div>
-        <div class="sr"><span class="sl">+ roof bars</span><span class="sv p10">~$67,765</span></div>
+        <div class="sr"><span class="sl">Your build</span><span class="sv p10">$68,560 ✓</span></div>
+        <div class="sr"><span class="sl">Load bars</span><span class="sv p10">Included ($520)</span></div>
         <div class="sr"><span class="sl">EPA range</span><span class="sv p10">322 mi</span></div>
         <div class="sr"><span class="sl">Peak DC</span><span class="sv p10">370 kW</span></div>
         <div class="sr"><span class="sl">10–80%</span><span class="sv p10">~16 min</span></div>
@@ -287,7 +287,7 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
       </div>
       <div class="stat-col">
         <div class="stat-head">Volvo EX60 P12</div>
-        <div class="sr"><span class="sl">Est. price</span><span class="sv p12">~$74,265 est.</span></div>
+        <div class="sr"><span class="sl">Your build</span><span class="sv p12">$72,500</span></div>
         <div class="sr"><span class="sl">EPA range</span><span class="sv p12">400 mi</span></div>
         <div class="sr"><span class="sl">Peak DC</span><span class="sv p12">370 kW</span></div>
         <div class="sr"><span class="sl">Avg DC 10–80%</span><span class="sv p12">~215–230 kW</span></div>
@@ -888,43 +888,47 @@ function showSeason(s){
   <!-- BMW BUILD -->
   <div class="card b" style="margin-bottom:1.25rem;max-width:100%;">
     <div class="card-hd b">
-      <div class="card-brand">BMW · Build Code FW0YUVM9 · Bill Pearce BMW, Reno</div>
+      <div class="card-brand">BMW · Build Code FW0885MQ · Bill Pearce BMW, Reno</div>
       <div class="card-name">iX3 50 xDrive — Your Actual Configured Build</div>
     </div>
     <div class="card-body">
       <div style="background:var(--blu-bg);border:1px solid var(--blu-bd);border-radius:7px;padding:9px 12px;margin-bottom:.875rem;font-size:.8rem;color:var(--blu-tx);">
-        ✓ <strong>Confirmed from official BMW configurator PDF, May 19, 2026.</strong> Build Code FW0YUVM9, associated with Bill Pearce BMW, Reno NV. This is your actual saved build.
+        ✓ <strong>Confirmed from official BMW configurator PDF, May 19, 2026.</strong> Build Code FW0885MQ, associated with Bill Pearce BMW, Reno NV. This is your actual saved build.
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
         <div>
           <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--b);margin-bottom:.5rem;">Base &amp; Packages (from PDF)</div>
           <div class="trim-row"><div><div class="trim-name">Base: iX3 50 xDrive Sport</div><div class="trim-note">463 hp · AWD · 383–434 mi · Panoramic iDrive 43" strip + 17.9" screen · Heated front seats std · 2-zone climate std · 20" wheels std</div></div><div class="tp b">$61,500</div></div>
           <div class="trim-row"><div><div class="trim-name">Comfort Package</div><div class="trim-note">Panoramic glass sunroof with climate comfort glazing · Heated steering wheel · Multifunction (massaging) front seats</div></div><div class="tp b">$1,500</div></div>
+          <div class="trim-row"><div><div class="trim-name">Driving Assistance Professional</div><div class="trim-note">In PDF build</div></div><div class="tp b">$2,500</div></div>
+          <div class="trim-row"><div><div class="trim-name">Parking Assistance Package</div><div class="trim-note">In PDF build</div></div><div class="tp b">$750</div></div>
           <div class="trim-row"><div><div class="trim-name">3-Zone Rear Seat Climate Control</div><div class="trim-note">Separate rear temperature zone · Added individually (not in Comfort Package)</div></div><div class="tp b">$200</div></div>
           <div class="trim-row"><div><div class="trim-name">Heated rear seats</div><div class="trim-note">Rear seat heating · Added individually</div></div><div class="tp b">$500</div></div>
         </div>
         <div>
-          <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--b);margin-bottom:.5rem;">Individual Options (from PDF)</div>
-          <div class="trim-row"><div><div class="trim-name">Ocean Wave Blue Metallic paint</div><div class="trim-note">Non-standard metallic colour</div></div><div class="tp b">$650</div></div>
+          <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--b);margin-bottom:.5rem;">Options & accessories (from PDF)</div>
+          <div class="trim-row"><div><div class="trim-name">Driving Assistance Professional</div><div class="trim-note">Highway assist — in your PDF build</div></div><div class="tp b">$2,500</div></div>
+          <div class="trim-row"><div><div class="trim-name">Parking Assistance Package</div><div class="trim-note">Parking Assistant Plus</div></div><div class="tp b">$750</div></div>
+          <div class="trim-row"><div><div class="trim-name">Alpine White · Agave Green interior</div><div class="trim-note">Standard — included</div></div><div class="tp b" style="color:var(--green);">Included</div></div>
           <div class="trim-row"><div><div class="trim-name">Trailer Hitch</div><div class="trim-note">Factory-installed · up to 4,400 lb towing</div></div><div class="tp b">$750</div></div>
-          <div class="trim-row"><div><div class="trim-name">Harman Kardon Premium Sound System</div><div class="trim-note">365W · Added as standalone option (not Technology Package)</div></div><div class="tp b">$650</div></div>
+          <div class="trim-row"><div><div class="trim-name">Harman Kardon Premium Sound</div><div class="trim-note">365W premium audio</div></div><div class="tp b">$650</div></div>
+          <div class="trim-row"><div><div class="trim-name">AC Adapter + V2L Adapter</div><div class="trim-note">$86 + $195</div></div><div class="tp b">$281</div></div>
           <div class="trim-row"><div><div class="trim-name">Destination &amp; Handling</div></div><div class="tp b">$1,350</div></div>
         </div>
       </div>
       <div style="margin-top:1rem;padding-top:.75rem;border-top:1.5px solid var(--border);">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;">
           <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;">Configured total (from PDF)</span>
-          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--b);">$67,100</span>
+          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--b);">$69,981</span>
         </div>
         <div style="font-size:.78rem;color:var(--muted);line-height:1.6;">
-          Base $61,500 + Comfort Pkg $1,500 + 3-zone climate $200 + heated rear seats $500 + metallic paint $650 + trailer hitch $750 + Harman Kardon $650 + destination $1,350 = <strong>$67,100</strong>. Confirmed from official configurator PDF.
+          Base $61,500 + Comfort $1,500 + Driving Assistance Pro $2,500 + Parking Assistance $750 + 3-zone $200 + heated rear $500 + hitch $750 + Harman Kardon $650 + adapters $281 + destination $1,350 = <strong>$69,981</strong>. Confirmed PDF (Build FW0885MQ).
         </div>
         <div style="margin-top:.75rem;background:#FFF8E0;border:1px solid #F5D98A;border-radius:7px;padding:9px 12px;font-size:.8rem;color:#6B4E00;">
-          <strong>⚠️ Not in this build — options still to consider:</strong><br>
-          • <strong>Roof rack: +$520</strong> — needed for Thule roof box. Not in your saved build.<br>
-          • <strong>Driving Assistance Professional: +$2,500</strong> — the self-driving/highway assist package. If you want lane-change assist on I-80 Nevada, this is the one. Not in your current build.<br>
-          • <strong>Technology Package: +$1,900</strong> — adds 3D HUD + Iconic Glow lighting. Optional but not essential.<br>
-          <strong>Build with roof rack only: $67,620 &nbsp;|&nbsp; With roof rack + Driving Asst Pro: $70,120 &nbsp;|&nbsp; Fully loaded: $72,020</strong>
+          <strong>⚠️ Not in this build — still to consider:</strong><br>
+          • <strong>Roof rack / load bars</strong> — needed for Thule roof box (not in PDF; est. +$500–$520 at dealer).<br>
+          • <strong>Technology Package: +$1,900</strong> — 3D HUD + Iconic Glow lighting. Optional.<br>
+          <strong>Driving Assistance Pro is already included ($2,500).</strong> With roof rack est.: ~$70,500.
         </div>
       </div>
     </div>
@@ -950,12 +954,14 @@ function showSeason(s){
           <div class="trim-row"><div><div class="trim-name">Climate Package</div><div class="trim-note">Heated rear seats · Heated steering wheel · Heated wiper blades</div></div><div class="tp p10">$750</div></div>
           <div class="trim-row"><div><div class="trim-name">Integrated booster cushions</div><div class="trim-note">Rear-seat integrated booster cushions — ideal for your daughter</div></div><div class="tp p10">$500</div></div>
           <div class="trim-row"><div><div class="trim-name">Electrochromic roof</div><div class="trim-note">Dimmable panoramic glass — added as option on Plus (standard on Ultra)</div></div><div class="tp p10">$950</div></div>
-          <div class="trim-row"><div><div class="trim-name">Retractable Trailer Hitch</div><div class="trim-note">Electrically retractable · up to 4,500 lb · Notably this is a $2,070 item on the US configurator — significantly more than estimated</div></div><div class="tp p10" style="color:var(--red);">$2,070</div></div>
+          <div class="trim-row"><div><div class="trim-name">Retractable Trailer Hitch</div><div class="trim-note">Electrically retractable · up to 4,500 lb</div></div><div class="tp p10" style="color:var(--red);">$2,070</div></div>
+          <div class="trim-row"><div><div class="trim-name">Load bars · mud flaps · sunshade · V2L</div><div class="trim-note">$520 + $215 + $290 + $270</div></div><div class="tp p10">$1,295</div></div>
           <div class="trim-row"><div><div class="trim-name">2 Years Complimentary Maintenance</div></div><div class="tp p10" style="color:var(--green);">Included</div></div>
         </div>
         <div>
-          <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--p10);margin-bottom:.5rem;">Not in this build — still to add</div>
-          <div class="trim-row"><div><div class="trim-name">Roof load bars / rack</div><div class="trim-note">Required for Thule roof box. Your build has "Roof rack fixing points" (standard) but not the actual bars. Volvo load bars for EX60 not yet priced in US configurator — approx $400–$550 based on EX40/EX90 pattern.</div></div><div class="tp p10" style="color:var(--red);">~$450–$550 est.</div></div>
+          <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--p10);margin-bottom:.5rem;">Additional options in your build (from PDF)</div>
+          <div class="trim-row"><div><div class="trim-name">Black load carriers (roof bars)</div><div class="trim-note">Wing profile bars — in your PDF ($520)</div></div><div class="tp p10">$520</div></div>
+          <div class="trim-row"><div><div class="trim-name">Mud flaps · sunshade · V2L</div><div class="trim-note">$215 + $290 + $270</div></div><div class="tp p10">$775</div></div>
           <div style="margin-top:.75rem;background:var(--p10l);border-radius:7px;padding:9px;font-size:.79rem;color:var(--p10);">
             <strong>Plus vs Ultra — what you're missing in this build:</strong><br>
             • Bowers &amp; Wilkins 28-speaker audio → Plus has <strong>Bose</strong> (good, not B&amp;W)<br>
@@ -972,15 +978,11 @@ function showSeason(s){
       <div style="margin-top:1rem;padding-top:.75rem;border-top:1.5px solid var(--border);">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;">
           <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;">Configured total as built (PDF)</span>
-          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--p10);">$67,265</span>
+          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--p10);">$68,560</span>
         </div>
         <div style="font-size:.78rem;color:var(--muted);line-height:1.6;">
-          Base Plus $62,145 + Cardamom Nordico $850 + Climate Package $750 + booster cushions $500 + electrochromic roof $950 + retractable trailer hitch $2,070 = <strong>$67,265</strong>. Destination included in base price.<br>
-          <strong>Add roof bars (~$500 est.) = ~$67,765 total.</strong> This is actually very close to the BMW at $67,100 — just $165 apart with roof bars.
-        </div>
-      </div>
-    </div>
-  </div>
+          Base Plus $62,145 + Cardamom $850 + Climate $750 + booster $500 + electrochromic $950 + hitch $2,070 + load bars $520 + mud flaps $215 + sunshade $290 + V2L $270 = <strong>$68,560</strong>. Destination included in base.<br>
+          <strong>Volvo is $1,421 less than the BMW ($69,981)</strong> — and includes roof bars, Pilot Assist, and integrated booster cushions.
         </div>
       </div>
     </div>
@@ -990,16 +992,16 @@ function showSeason(s){
   <div class="card p12" style="margin-bottom:1.25rem;max-width:100%;">
     <div class="card-hd p12">
       <div class="card-brand">Volvo EX60</div>
-      <div class="card-name">P12 AWD — Full Configured Build (estimated)</div>
+      <div class="card-name">P12 AWD Plus — Your Target Build ($72,500)</div>
     </div>
     <div class="card-body">
       <div style="background:var(--pur-bg);border:1px solid var(--pur-bd);border-radius:7px;padding:9px 12px;margin-bottom:.875rem;font-size:.8rem;color:var(--pur-tx);">
-        <strong>P12 pricing not yet officially released</strong> (as of May 19, 2026). US configurator not yet live. Estimates below now use the <em>Plus trim as baseline</em> (matching the P10 build you've configured), plus the confirmed retractable hitch cost of $2,070. EU P12 vs P10 gap is ~€6,000 Plus–to–Plus. Treat these as best-estimate ranges.
+        <strong>P12 US configurator not yet live.</strong> You asked to assume <strong>$72,500</strong> for the same spec as your confirmed P10 PDF build (Plus trim, same options). That is <strong>$3,940 above the P10 ($68,560)</strong> — a smaller step than earlier ~$7k estimates.
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
         <div>
           <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--p12);margin-bottom:.5rem;">Base Trim (estimated)</div>
-          <div class="trim-row"><div><div class="trim-name">P12 AWD Plus (est.)</div><div class="trim-note">670 hp · 400 mi · Same Plus content as your P10 build + larger 117 kWh battery. EU gap ~$6,500 Plus-to-Plus over P10.</div></div><div class="tp p12">~$68,645 est.</div></div>
+          <div class="trim-row"><div><div class="trim-name">P12 AWD Plus (est.)</div><div class="trim-note">670 hp · 400 mi · Same Plus content as your P10 build + larger 117 kWh battery. EU gap ~$6,500 Plus-to-Plus over P10.</div></div><div class="tp p12">In $72,500 total</div></div>
           <div style="font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--p12);margin-bottom:.5rem;margin-top:.75rem;">Included in P12 Ultra ✓</div>
           <div class="trim-row"><div><div class="trim-name">Electrochromic panoramic roof</div><div class="trim-note">Same as P10 Ultra — standard in Ultra trim</div></div><div class="tp p12" style="color:var(--green);">Included</div></div>
           <div class="trim-row"><div><div class="trim-name">Heated rear seats + booster seats</div><div class="trim-note">Integrated second-row heated booster cushions</div></div><div class="tp p12" style="color:var(--green);">Included</div></div>
@@ -1015,17 +1017,17 @@ function showSeason(s){
           <div class="trim-row"><div><div class="trim-name">Non-standard paint</div><div class="trim-note">Same colour premium as P10</div></div><div class="tp p12">~$695–$800 est.</div></div>
           <div class="trim-row"><div><div class="trim-name">Destination</div></div><div class="tp p12">$1,395</div></div>
           <div style="margin-top:.75rem;padding:.6rem;background:var(--pur-bg);border-radius:6px;font-size:.78rem;color:var(--pur-tx);">
-            <strong>P12 vs P10 Ultra configured cost delta:</strong> The P12 adds ~$6,500 over P10 Ultra at the base level. With the same accessories, you're looking at ~$3,500–$4,500 more than the P10 configured build. The premium buys 78 more EPA miles, better winter range, and 167 extra horsepower.
+            <strong>P12 vs your P10 PDF build:</strong> At $72,500 assumed, you pay $3,940 more than P10 ($68,560) for 78 more EPA miles, stronger winter range, and 167 more hp.
           </div>
         </div>
       </div>
       <div style="margin-top:1rem;padding-top:.75rem;border-top:1.5px solid var(--border);">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.3rem;">
-          <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;">Configured total (estimated)</span>
-          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--p12);">~$73,765 est.</span>
+          <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;">Configured total (your assumption)</span>
+          <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:var(--p12);">$72,500</span>
         </div>
         <div style="font-size:.78rem;color:var(--muted);line-height:1.6;">
-          P12 Plus ~$68,645 est. + same options as your P10 build (Cardamom interior $850 + Climate Pkg $750 + booster cushions $500 + electrochromic roof $950 + retractable hitch $2,070) + load bars ~$500 = <strong>~$74,265 est.</strong> This is ~$6,500–$7,000 more than your P10 build. Treat as indicative — confirm when Volvo releases P12 US pricing.
+          <strong>$72,500 assumed</strong> for P12 Plus with the same options as your P10 PDF build. That is <strong>$3,940 more than P10 ($68,560)</strong> and <strong>$2,519 less than stacking P10 + a bigger battery would have suggested</strong> at old estimates. Confirm when Volvo opens P12 US ordering.
         </div>
       </div>
     </div>
@@ -1049,21 +1051,19 @@ function showSeason(s){
           <tr><th>Car</th><th class="bh">BMW iX3</th><th class="p10h">EX60 P10</th><th class="p12h">EX60 P12</th></tr>
         </thead>
         <tbody>
-          <tr><td>Base price</td><td>$61,500</td><td>$68,745 (Ultra)</td><td>~$75,245 est.</td></tr>
-          <tr><td>Tow hitch</td><td>$750</td><td>~$975 est.</td><td>~$975 est.</td></tr>
-          <tr><td>Roof bars</td><td>$520</td><td>~$500 est.</td><td>~$500 est.</td></tr>
-          <tr><td>Heated rear seats</td><td>$500 + $200</td><td class="win p10">Incl. in Ultra</td><td class="win p12">Incl. in Ultra</td></tr>
-          <tr><td>Multifunction front seats</td><td>In Comfort Pkg</td><td class="win p10">Incl. in Ultra</td><td class="win p12">Incl. in Ultra</td></tr>
-          <tr><td>Rear climate zone</td><td>$200 (std with rear heat)</td><td class="win p10">Incl. in Ultra</td><td class="win p12">Incl. in Ultra</td></tr>
-          <tr><td>Comfort Pkg (sunroof + wheel)</td><td>$1,500</td><td class="win p10">Incl. in Ultra</td><td class="win p12">Incl. in Ultra</td></tr>
-          <tr><td>Self-driving / Highway Assist</td><td>$2,500</td><td class="dim">Pilot Assist std</td><td class="dim">Pilot Assist std</td></tr>
-          <tr><td>Sound system</td><td>$1,200 (H/K in Tech Pkg)</td><td class="win p10">B&amp;W incl. in Ultra</td><td class="win p12">B&amp;W incl. in Ultra</td></tr>
-          <tr><td>Non-standard metallic paint</td><td>$650</td><td>~$750 est.</td><td>~$750 est.</td></tr>
-          <tr><td>Destination</td><td>$1,350</td><td>$1,395</td><td>$1,395</td></tr>
-          <tr><td style="font-weight:600;">Configured total</td><td style="font-weight:600;color:var(--b);">$69,970</td><td style="font-weight:600;color:var(--p10);">~$72,365</td><td style="font-weight:600;color:var(--p12);">~$78,865</td></tr>
+          <tr><td>Trim</td><td>iX3 50 xDrive Sport</td><td>EX60 Plus P10</td><td>EX60 Plus P12 (assumed)</td></tr>
+          <tr><td>Base MSRP</td><td>$61,500</td><td>$62,145</td><td class="dim">In P12 total</td></tr>
+          <tr><td>Family / comfort options</td><td>$4,450 pkgs</td><td>$3,050 options</td><td>Same as P10</td></tr>
+          <tr><td>Tow hitch</td><td>$750</td><td>$2,070</td><td>$2,070</td></tr>
+          <tr><td>Roof bars</td><td class="dim">Not in build</td><td class="win p10">$520 ✓ in build</td><td>$520</td></tr>
+          <tr><td>Highway assist</td><td class="win b">$2,500 (in build)</td><td class="dim">Pilot Assist std</td><td class="dim">Pilot Assist std</td></tr>
+          <tr><td>Sound</td><td>Harman Kardon $650</td><td>Bose (Plus std)</td><td>Bose (Plus std)</td></tr>
+          <tr><td>Paint</td><td>Alpine White incl.</td><td>Forest Lake incl.</td><td>Forest Lake incl.</td></tr>
+          <tr><td>Destination</td><td>$1,350</td><td>Incl. in base</td><td>Incl. in base</td></tr>
+          <tr><td style="font-weight:600;">Configured total (PDF / assumed)</td><td style="font-weight:600;color:var(--b);">$69,981 ✓</td><td style="font-weight:600;color:var(--p10);">$68,560 ✓</td><td style="font-weight:600;color:var(--p12);">$72,500</td></tr>
         </tbody>
       </table>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:.6rem;">Volvo accessory prices estimated — confirm with dealer. P12 base price estimated until official release.</div>
+      <div style="font-size:.75rem;color:var(--muted);margin-top:.6rem;">BMW & Volvo P10 from official configurator PDFs May 19, 2026. P12 at $72,500 is your stated assumption.</div>
     </div>
   </div>
 </div>
@@ -1189,7 +1189,7 @@ function showSeason(s){
         </ul></div>
         <div class="cons-box"><div class="pc-head">Cons</div><ul class="pc-list">
           <li>Slower charging per stop than P10: 19 min vs 16 min — same peak kW, bigger battery = longer fill</li>
-          <li>Price not yet confirmed; estimated $68–72k+ — likely $6–10k more than P10 Plus</li>
+          <li>Assumed $72,500 configured — $3,940 more than your P10 PDF build</li>
           <li>Not available yet — late 2026 delivery</li>
           <li>Can't be ordered or configured today</li>
           <li>Same V3 Supercharger cap (~150 kW) as P10 — must plan EA stations on Nevada segment</li>
@@ -1214,12 +1214,12 @@ function showSeason(s){
       <tbody>
         <tr><td class="cat" colspan="5">Pricing — Base vs Configured (with tow hitch, roof bars, heated rear seats, multifunction front seats, rear climate, non-standard paint, 20" wheels, sunroof/electrochromic roof, standard premium audio)</td></tr>
         <tr><td>Base price (inc. dest.)</td><td class="win r">$57,990 (Perf.)</td><td>$62,850</td><td>$62,145 (Plus) / $70,140 (Ultra)</td><td class="dim">~$69–76k est.</td></tr>
-        <tr><td><strong>Configured price (your spec)</strong></td><td class="dim">TBC — configurator pending</td><td class="win b">$67,100 ✓ confirmed PDF</td><td class="win p10">$67,265 ✓ confirmed PDF</td><td class="dim">~$74,265 est.</td></tr>
-        <tr><td>Add roof rack/bars (needed for Thule)</td><td class="dim">Integrated (std)</td><td class="dim">+$520 → $67,620</td><td class="dim">+~$500 est. → ~$67,765</td><td class="dim">+~$500 est.</td></tr>
-        <tr><td>Premium over R2 Performance (configured)</td><td class="win r">Baseline $57,990</td><td class="dim">+~$9.1k over R2</td><td class="dim">+~$9.3k over R2</td><td class="dim">+~$16.3k over R2</td></tr>
+        <tr><td><strong>Configured price (your spec)</strong></td><td class="dim">TBC — configurator pending</td><td class="win b">$69,981 ✓ confirmed PDF</td><td class="win p10">$68,560 ✓ confirmed PDF</td><td class="dim">$72,500</td></tr>
+        <tr><td>Roof bars in build?</td><td class="dim">No — add at dealer</td><td class="win p10">Yes ($520)</td><td class="win p12">Yes ($520)</td></tr>
+        <tr><td>Premium over R2 Performance (configured)</td><td class="win r">Baseline $57,990</td><td class="dim">+$12.0k over R2</td><td class="dim">+$10.6k over R2</td><td class="dim">+$14.5k over R2</td></tr>
         <tr><td>OBBBA loan deduction (3 yrs @ 22% bracket)</td><td class="win r">~$5,280 saving (US-built)</td><td class="dim">✗ Not eligible</td><td class="dim">✗ Not eligible</td><td class="dim">✗ Not eligible</td></tr>
-        <tr><td><strong>Effective cost after OBBBA (financed)</strong></td><td class="win r">~$52,710 effective</td><td class="dim">$67,100 (no relief)</td><td class="dim">~$67,265 (no relief)</td><td class="dim">~$74,265 (no relief)</td></tr>
-        <tr><td>Price gap vs R2 after OBBBA</td><td class="win r">—</td><td class="dim">~$14,390 more</td><td class="dim">~$14,555 more</td><td class="dim">~$21,555 more</td></tr>
+        <tr><td><strong>Effective cost after OBBBA (financed)</strong></td><td class="win r">~$52,710 effective</td><td class="dim">$69,981 (no relief)</td><td class="dim">~$68,560 (no relief)</td><td class="dim">$72,500 (no relief)</td></tr>
+        <tr><td>Price gap vs R2 after OBBBA</td><td class="win r">—</td><td class="dim">~$17,270 more</td><td class="dim">~$15,850 more</td><td class="dim">~$19,790 more</td></tr>
         <tr><td>Key options already included in base</td><td class="dim">No full configurator yet</td><td class="dim">Most require add-ons at extra cost</td><td class="win p10">Nearly all included in Ultra trim</td><td class="win p12">Same as P10 Ultra</td></tr>
         <tr><td>Order/configure today</td><td class="win r">✓ Delivering now</td><td>✓ Reserve + $1k deposit</td><td class="win p10">✓ Orders open</td><td class="dim">✗ Not yet</td></tr>
         <tr><td class="cat" colspan="5">Range in Conditions</td></tr>
@@ -1263,7 +1263,7 @@ function showSeason(s){
   <div style="background:var(--text);color:#fff;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;">
     <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.875rem;letter-spacing:-.01em;">The configured price reality — confirmed from official PDFs (May 19, 2026)</div>
     <div style="background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.3);border-radius:8px;padding:.875rem;margin-bottom:.875rem;font-size:.83rem;">
-      <strong style="color:#FFD700;">🎯 Major finding:</strong> The BMW iX3 ($67,100) and Volvo EX60 P10 ($67,265) are virtually identical in price — just <strong style="color:#FFD700;">$165 apart</strong> as configured. Add roof bars to both (~$500–$520) and they're within $5 of each other. This fundamentally changes the comparison from "BMW vs Volvo ~$2,400 gap" to "two cars at essentially the same price with different strengths."
+      <strong style="color:#FFD700;">🎯 Major finding:</strong> The BMW iX3 ($69,981) and Volvo EX60 P10 ($68,560) differ by <strong style="color:#FFD700;">$1,421 — Volvo P10 is cheaper at $68,560 vs BMW $69,981</strong>. Your Volvo build already includes roof bars ($520); the BMW does not. The BMW includes Driving Assistance Pro ($2,500) and more EPA range; the Volvo includes Pilot Assist, booster cushions, and Google Gemini at lower cost.
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;">
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
@@ -1275,24 +1275,24 @@ function showSeason(s){
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#7EC3F7;margin-bottom:.3rem;">BMW iX3</div>
-        <div style="font-size:1.3rem;font-weight:700;color:#7EC3F7;">$67,100</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Confirmed PDF · +$520 rack = $67,620</div>
+        <div style="font-size:1.3rem;font-weight:700;color:#7EC3F7;">$69,981</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Confirmed PDF · no roof rack</div>
         <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.4rem;">No OBBBA relief</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$14.4k over R2 after OBBBA</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$17.3k over R2 after OBBBA</div>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#89B8E8;margin-bottom:.3rem;">EX60 P10</div>
-        <div style="font-size:1.3rem;font-weight:700;color:#89B8E8;">$67,265</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Confirmed PDF · +~$500 bars = ~$67,765</div>
+        <div style="font-size:1.3rem;font-weight:700;color:#89B8E8;">$68,560</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Confirmed PDF · bars included</div>
         <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.4rem;">No OBBBA relief</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$14.6k over R2 after OBBBA</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$15.9k over R2 after OBBBA</div>
       </div>
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:#C89EE8;margin-bottom:.3rem;">EX60 P12</div>
-        <div style="font-size:1.3rem;font-weight:700;color:#C89EE8;">~$74,265</div>
-        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Estimated · P12 price TBC</div>
+        <div style="font-size:1.3rem;font-weight:700;color:#C89EE8;">$72,500</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;">Your $72,500 assumption</div>
         <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.4rem;">No OBBBA relief</div>
-        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$21.6k over R2 after OBBBA</div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.35);">+~$19.8k over R2 after OBBBA</div>
       </div>
     </div>
     <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.75rem;">Configured spec: tow hitch · roof bars · heated rear seats · multifunction front seats · rear climate · non-standard metallic paint · 20" wheels · panoramic/electrochromic roof · standard premium audio · Highway Assist (BMW only)</div>
@@ -1301,7 +1301,7 @@ function showSeason(s){
   <!-- P10 vs P12 callout — updated with real numbers -->
   <div class="alert alert-warn" style="margin-bottom:1.25rem;">
     <div class="alert-hd">P10 vs P12 — with confirmed P10 price, the gap is now clearer</div>
-    Your confirmed P10 Plus build is $67,265. The P12 Plus equivalent is estimated at ~$74,265 — a <strong>~$7,000 real-money gap</strong> for the same spec. What you buy with that $7,000: 78 more EPA miles, winter range jumping from ~248 mi to ~305 mi effective (enough for a Jan Truckee–SF round trip without charging), and 167 more horsepower. The P10 also charges faster per stop (16 min vs 19 min). If the SF winter round trip is a genuine monthly need, the P12 premium is defensible. If you'll accept a 16-min charge stop on January SF returns, the P10 saves you ~$7,000 and charges faster every time.
+    Your confirmed P10 Plus build is $68,560. The P12 Plus equivalent is estimated at $72,500 — a <strong>~$3,940 real-money gap</strong> for the same spec. What you buy with that $3,940: 78 more EPA miles, winter range jumping from ~248 mi to ~305 mi effective (enough for a Jan Truckee–SF round trip without charging), and 167 more horsepower. The P10 also charges faster per stop (16 min vs 19 min). If the SF winter round trip is a genuine monthly need, the P12 premium is defensible. If you'll accept a 16-min charge stop on January SF returns, the P10 saves you ~$3,940 and charges faster every time.
   </div>
 
   <div class="vgrid">
@@ -1318,9 +1318,9 @@ function showSeason(s){
       </div>
     </div>
     <div class="vc b">
-      <div class="vc-badge">BMW iX3 · $67,100 confirmed · +$520 rack = $67,620</div>
-      <div class="vc-title">Best range & same price as the Volvo — the surprise of the comparison</div>
-      <div class="vc-text">At $67,100 confirmed from your saved build, the iX3 is essentially the same price as the Volvo P10 — just $165 apart before roof bars. Add racks to both and it's still a coin flip on price. What you get for that is the best range of any car here (434 mi EPA, 325–335 mi winter), fewest Steamboat charge stops, and fastest DC charging at 400 kW on EA. The trade-offs vs Volvo: no Google Gemini AI, no multi-adaptive belt, no daughter booster seat integration, Driving Assistance Pro (self-driving highway) costs another $2,500 extra. Falls 2026 delivery.</div>
+      <div class="vc-badge">BMW iX3 · $69,981 confirmed PDF</div>
+      <div class="vc-title">Best range — but $1,421 more than the Volvo P10</div>
+      <div class="vc-text">At $69,981 confirmed from your PDF build, the iX3 is $1,421 more than the Volvo P10 ($68,560), which already includes roof bars. What you get for that is the best range of any car here (434 mi EPA, 325–335 mi winter), fewest Steamboat charge stops, and fastest DC charging at 400 kW on EA. The trade-offs vs Volvo: no Google Gemini AI, no multi-adaptive belt, no daughter booster seat integration, Driving Assistance Pro ($2,500) is already in your BMW build. Falls 2026 delivery.</div>
       <div class="sc-sec">
         <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill b" style="width:88%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill b" style="width:82%"></div></div></div>
@@ -1330,9 +1330,9 @@ function showSeason(s){
       </div>
     </div>
     <div class="vc p10">
-      <div class="vc-badge">EX60 P10 Plus · $67,265 confirmed · +~$500 bars = ~$67,765</div>
-      <div class="vc-title">Best family car — and essentially the same price as the BMW</div>
-      <div class="vc-text">At $67,265 confirmed from your saved build, the P10 Plus is $165 more than the BMW — essentially the same price. What tips it for a family with a toddler: Google Gemini AI built-in, multi-adaptive front safety belt (world first), integrated rear booster cushions for your daughter, air purification, 16-min charge stops (fastest of all four), heat pump, and available summer 2026. Bose sound system (not B&W) and Nordico upholstery (not Nappa) reflect the Plus trim — both are good, just not the Ultra tier. The V3 cap on I-80 Nevada (~150 kW) means plan EA at Elko + SLC for full charging speed.</div>
+      <div class="vc-badge">EX60 P10 Plus · $68,560 confirmed PDF (bars incl.)</div>
+      <div class="vc-title">Best family car — and $1,421 less than the BMW</div>
+      <div class="vc-text">At $68,560 confirmed from your saved build, the P10 Plus is $1,421 less than the BMW — still close in price ($1,421 less than BMW). What tips it for a family with a toddler: Google Gemini AI built-in, multi-adaptive front safety belt (world first), integrated rear booster cushions for your daughter, air purification, 16-min charge stops (fastest of all four), heat pump, and available summer 2026. Bose sound system (not B&W) and Nordico upholstery (not Nappa) reflect the Plus trim — both are good, just not the Ultra tier. The V3 cap on I-80 Nevada (~150 kW) means plan EA at Elko + SLC for full charging speed.</div>
       <div class="sc-sec">
         <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill p10" style="width:88%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill p10" style="width:97%"></div></div></div>
@@ -1342,9 +1342,9 @@ function showSeason(s){
       </div>
     </div>
     <div class="vc p12">
-      <div class="vc-badge">EX60 P12 Plus · ~$74,265 est. · ~$6,500–7,000 over P10</div>
+      <div class="vc-badge">EX60 P12 Plus · $72,500 · ~$3,940 over P10</div>
       <div class="vc-title">Strongest winter range Volvo — justified for ski trip + roof box combo</div>
-      <div class="vc-text">At ~$74,265 est. (same Plus-based spec as your P10 build), the P12 is ~$6,500–7,000 more than the P10. What you buy: 400 mi EPA (vs 322), ~305 mi in February cold (vs ~248), and critically — with a loaded Thule roof box in February, the P12 gives ~252 effective miles vs ~203 for the P10. That's the difference between comfortable Steamboat stages and stressful ones. Charges slightly slower (19 vs 16 min), same safety features, same Google Gemini. Not yet orderable — late 2026 delivery.</div>
+      <div class="vc-text">At $72,500 (same Plus-based spec as your P10 build), the P12 is ~$3,940 more than the P10. What you buy: 400 mi EPA (vs 322), ~305 mi in February cold (vs ~248), and critically — with a loaded Thule roof box in February, the P12 gives ~252 effective miles vs ~203 for the P10. That's the difference between comfortable Steamboat stages and stressful ones. Charges slightly slower (19 vs 16 min), same safety features, same Google Gemini. Not yet orderable — late 2026 delivery.</div>
       <div class="sc-sec">
         <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill p12" style="width:68%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Daily use</span><div class="sc-track"><div class="sc-fill p12" style="width:97%"></div></div></div>
@@ -1361,27 +1361,27 @@ function showSeason(s){
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
       <div>
-        <p style="margin-bottom:.5rem;"><strong>BMW vs Volvo P10 — price is now a tie.</strong><br>→ At $67,100 vs $67,265 (before roof racks), both cars cost essentially the same. The choice is now purely about what matters most: BMW = more range + winter buffer + fewer road trip stops. Volvo = better child safety + Google Gemini AI + faster charge stops + available sooner.</p>
+        <p style="margin-bottom:.5rem;"><strong>BMW vs Volvo P10 — Volvo is $1,421 cheaper.</strong><br>→ At $69,981 vs $68,560, the Volvo is cheaper and already has roof bars in the build. The choice is now purely about what matters most: BMW = more range + winter buffer + fewer road trip stops. Volvo = better child safety + Google Gemini AI + faster charge stops + available sooner.</p>
         <p style="margin-bottom:.5rem;"><strong>Do you finance the purchase and earn under $200K (MFJ)?</strong><br>→ The R2 at ~$52,710 effective is ~$14–15k cheaper than BMW or Volvo P10 after OBBBA. That's still a large and meaningful gap. R2 becomes the strong default if adventure capability and value dominate.</p>
-        <p style="margin-bottom:.5rem;"><strong>Is the monthly SF Bay round trip in January without charging a hard requirement?</strong><br>→ Only the P12 (~$74,265, ~305 mi winter) and iX3 ($67,100, ~325–335 mi winter) can reliably do it. The P10 (~248 mi winter) cannot. Notably the iX3 now costs ~$7k less than the P12 for comparable winter range.</p>
+        <p style="margin-bottom:.5rem;"><strong>Is the monthly SF Bay round trip in January without charging a hard requirement?</strong><br>→ Only the P12 ($72,500, ~305 mi winter) and iX3 ($69,981, ~325–335 mi winter) can reliably do it. The P10 (~248 mi winter) cannot. Notably the iX3 now costs ~$3.9k less than the P12 for comparable winter range.</p>
       </div>
       <div>
         <p style="margin-bottom:.5rem;"><strong>Do you want the car now — not fall/late 2026?</strong><br>→ R2 (delivering now) or P10 Plus (summer 2026). iX3 doesn't land until Fall 2026; P12 late 2026.</p>
         <p style="margin-bottom:.5rem;"><strong>Does the Thule roof box on ski trips shift the P10 vs P12 decision?</strong><br>→ Yes materially. P10 + loaded box in February = ~203 mi effective range. P12 + box = ~252 mi. That extra 50 miles removes the need for a cautious extra stop in Nevada. If you use the box on every Steamboat trip, the P12 case strengthens.</p>
-        <p><strong>Is the self-driving highway assist worth $2,500 extra on the BMW?</strong><br>→ It's not in your current BMW build. If you want hands-free I-80 Nevada driving, add Driving Assistance Pro ($2,500) = $70,120 total — now $2,355 more than the Volvo.</p>
+        <p><strong>Is the self-driving highway assist worth $2,500 extra on the BMW?</strong><br>→ It is already in your BMW build ($2,500 included). The Volvo has Pilot Assist standard at no extra cost.</p>
       </div>
     </div>
 
     <div style="margin-top:1rem;padding:1rem;background:var(--bg);border-radius:8px;border-left:3px solid var(--p10);">
-      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--p10);margin-bottom:.4rem;">Overall recommendation — EX60 P10 Plus at $67,265 (+ roof bars ~$67,765)</div>
-      <div style="font-size:.82rem;line-height:1.7;color:var(--text);">Now that the confirmed prices are in, the BMW and Volvo P10 are at the same price. The P10 wins on family grounds: Google Gemini AI, multi-adaptive safety belt, integrated booster seat for your daughter, fastest charge stops (16 min), air purification, and available summer 2026. The BMW wins on range and winter buffer — if those matter more to you, it's now a legitimate equal-cost alternative rather than the more expensive option it seemed to be.<br><br>
-      <strong>Specific scenario upgrades:</strong> If you do SF in January monthly without stopping → seriously consider iX3 (same price, much better winter range) or P12 (~$6,500–7k more). If you finance and qualify for OBBBA → R2 at ~$52,710 effective is ~$15k cheaper and available now. If ski trips always mean Thule box in February → P12 removes the tight range anxiety that the P10 has with a loaded roof box in Nevada cold.</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--p10);margin-bottom:.4rem;">Overall recommendation — EX60 P10 Plus at $68,560</div>
+      <div style="font-size:.82rem;line-height:1.7;color:var(--text);">Now that the confirmed PDF prices are in, the Volvo P10 ($68,560) undercuts the BMW ($69,981) by $1,421. The P10 wins on family grounds: Google Gemini AI, multi-adaptive safety belt, integrated booster seat for your daughter, fastest charge stops (16 min), air purification, and available summer 2026. The BMW wins on range and winter buffer — if those matter more to you, you pay $1,421 more for range and winter buffer.<br><br>
+      <strong>Specific scenario upgrades:</strong> If you do SF in January monthly without stopping → consider iX3 ($1,421 more than P10, much better winter range) or P12 (~$3,940 more). If you finance and qualify for OBBBA → R2 at ~$52,710 effective is ~$15k cheaper and available now. If ski trips always mean Thule box in February → P12 removes the tight range anxiety that the P10 has with a loaded roof box in Nevada cold.</div>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <strong>Sources:</strong> BMW iX3 build confirmed from official configurator PDF May 19, 2026 (Build Code FW0YUVM9, Bill Pearce BMW Reno) · Volvo EX60 P10 Plus build confirmed from official Volvo configurator PDF May 19, 2026 · Rivian EPA filings (Apr 2026) · Volvo EX60 US pricing (Electrek, InsideEVs, TFLCar, May 2026) · TDPUD Rebate PDF (Jan 2026) · Liberty Utilities website · IRS 30C guidance · Argonne ANL mapping · AAA gas prices May 17–19, 2026 · Supercharger/EA pricing TrendX Insights Q1–Q2 2026 · Xweather EV Range Report · Vaisala weather/range study · IRS OBBBA guidance · Consumer Reports roof box SUV test · Weather data: Weather Atlas, CDOT cotrip.org · Data current May 19, 2026. P12 pricing estimated; not yet officially confirmed by Volvo US. Volvo roof bar pricing estimated — confirm with dealer.
+  <strong>Sources:</strong> BMW iX3 build confirmed from official configurator PDF May 19, 2026 (Build Code FW0885MQ, Bill Pearce BMW Reno) · Volvo EX60 P10 Plus build confirmed from official Volvo configurator PDF May 19, 2026 · Rivian EPA filings (Apr 2026) · Volvo EX60 US pricing (Electrek, InsideEVs, TFLCar, May 2026) · TDPUD Rebate PDF (Jan 2026) · Liberty Utilities website · IRS 30C guidance · Argonne ANL mapping · AAA gas prices May 17–19, 2026 · Supercharger/EA pricing TrendX Insights Q1–Q2 2026 · Xweather EV Range Report · Vaisala weather/range study · IRS OBBBA guidance · Consumer Reports roof box SUV test · Weather data: Weather Atlas, CDOT cotrip.org · Data current May 19, 2026. P12 at $72,500 per your assumption; P10 & BMW from configurator PDFs May 19, 2026.
 </div>
 
 </body>
