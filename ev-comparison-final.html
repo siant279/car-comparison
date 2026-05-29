@@ -244,7 +244,7 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
 <div class="hdr">
   <div class="eyebrow">Truckee, CA · EV Decision Guide · May 2026</div>
   <h1>Rivian R2 <span class="dot">·</span> BMW iX3 <span class="dot">·</span> Volvo EX60 P10 <span class="dot">·</span> Volvo EX60 P12</h1>
-  <p class="hdr-sub">Replacing one existing SUV · Cash purchase · Range &amp; charging first · Truckee → Steamboat / SF</p>
+  <p class="hdr-sub">Replacing one existing SUV · Range &amp; charging first · Truckee → Steamboat / SF</p>
   <div class="ctx-bar">
     <span class="ctx-pill"><strong>School run</strong> + errands</span>
     <span class="ctx-pill"><strong>Reno</strong> monthly ~35 mi</span>
@@ -331,7 +331,7 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
 
 <!-- DECISION PRIORITIES -->
 <div class="section container" id="priorities">
-  <div class="sec-label">How this guide weights the decision · Cash purchase</div>
+  <div class="sec-label">How this guide weights the decision</div>
   <div class="sec-title">Decision Priorities (in order)</div>
 
   <div class="priority-grid">
@@ -348,20 +348,20 @@ hr.div{border:none;border-top:1.5px solid var(--border)}
     <div class="pri-card">
       <div class="pri-num">#3</div>
       <div class="pri-title">Value (not lowest price)</div>
-      <p style="font-size:.82rem;color:var(--muted);line-height:1.5">You're paying <strong>cash</strong> — no loan-interest tax tricks. Value = range + charging + features per dollar, not sticker price alone.</p>
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.5">Value = range + charging + features per configured dollar, not base sticker alone.</p>
     </div>
   </div>
 
   <div class="alert alert-blu">
-    <div class="alert-hd">Cash purchase note</div>
-    OBBBA loan-interest deductions <strong>do not apply</strong> to a cash purchase. The Rivian's ~$5,280 "effective" financed price advantage is irrelevant. Compare <strong>real cash prices</strong>: R2 $57,990 base · BMW $70,501 configured · P10 $68,560 · P12 $72,500.
+    <div class="alert-hd">Configured price comparison</div>
+    Compare <strong>configured prices</strong> (not base MSRP): R2 $57,990 base · BMW $70,501 · P10 $68,560 · P12 $72,500. If financing, OBBBA loan-interest deductions can shift the math — see Incentives.
   </div>
 
   <div class="cw" style="margin-top:1rem">
     <table class="ct">
-      <thead><tr><th>Model</th><th class="bh">Cash price</th><th class="bh">$/EPA mi</th><th class="bh">$/winter mi (Feb est.)</th><th>Verdict on value-for-range</th></tr></thead>
+      <thead><tr><th>Model</th><th class="bh">Configured price</th><th class="bh">$/EPA mi</th><th class="bh">$/winter mi (Feb est.)</th><th>Verdict on value-for-range</th></tr></thead>
       <tbody>
-        <tr><td>Rivian R2 Perf.</td><td>$57,990</td><td>~$173/mi</td><td class="dim">~$237/mi</td><td class="dim">Cheapest cash — weakest range/charging</td></tr>
+        <tr><td>Rivian R2 Perf.</td><td>$57,990</td><td>~$173/mi</td><td class="dim">~$237/mi</td><td class="dim">Lowest price — weakest range/charging</td></tr>
         <tr><td>BMW iX3 (example build)</td><td class="win b">$70,501</td><td class="win b">~$162/mi</td><td class="win b">~$217/mi</td><td class="win b">Best range per dollar</td></tr>
         <tr><td>Volvo EX60 P10</td><td>$68,560</td><td>~$213/mi</td><td>~$277/mi</td><td>Strong family kit; weaker winter $/mi</td></tr>
         <tr><td>Volvo EX60 P12</td><td>$72,500</td><td>~$181/mi</td><td>~$238/mi</td><td>Near-BMW winter value + Volvo safety</td></tr>
@@ -1167,8 +1167,8 @@ function showSeason(s){
 
   <div class="cards3" style="margin-bottom:1.25rem;">
     <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:1.1rem;">
-      <div style="font-size:.82rem;font-weight:500;margin-bottom:.6rem">OBBBA Loan Interest (N/A — paying cash)</div>
-      <div class="src-row"><span class="src-lbl">Who qualifies</span><span class="src-amt">N/A</span><span class="src-detail">Cash buyers — loan interest deduction does not apply. Listed for reference only.</span></div>
+      <div style="font-size:.82rem;font-weight:500;margin-bottom:.6rem">OBBBA Loan Interest (if financing)</div>
+      <div class="src-row"><span class="src-lbl">Who qualifies</span><span class="src-amt">Financed buyers</span><span class="src-detail">US-assembled EVs only. R2 qualifies; BMW iX3 and Volvo EX60 (Sweden-built) do not.</span></div>
       <div class="src-row"><span class="src-lbl">Max deduction/yr</span><span class="src-amt">Up to $10,000</span><span class="src-detail">On car loan interest, through 2028. Above-the-line, no need to itemize.</span></div>
       <div class="src-row"><span class="src-lbl">Income phase-out (MFJ)</span><span class="src-amt">$200K–$250K MAGI</span><span class="src-detail">Full deduction under $200K. Gone at $250K.</span></div>
       <div class="src-row"><span class="src-lbl">Real value (22% bracket, $8K interest)</span><span class="src-amt">~$1,760/yr</span><span class="src-detail">~$5,280 over 3-year loan — real financial advantage for R2 vs EX60/iX3.</span></div>
@@ -1237,7 +1237,7 @@ function showSeason(s){
       <strong>Insurance &amp; total cost of ownership</strong><br>Get quotes for each VIN trim in Truckee — EV SUVs vary widely by carrier and repair cost assumptions.
     </div></div>
     <div class="card"><div class="card-body" style="font-size:.82rem">
-      <strong>Depreciation &amp; resale</strong><br>Rivian and new platforms carry more uncertainty than BMW/Volvo lease residuals. Cash buyers bear full depreciation.
+      <strong>Depreciation &amp; resale</strong><br>Rivian and new platforms carry more uncertainty than BMW/Volvo lease residuals. Buyers bear full depreciation risk on new platforms.
     </div></div>
     <div class="card"><div class="card-body" style="font-size:.82rem">
       <strong>Service network</strong><br>Local BMW dealer for iX3 · Volvo Sacramento/Roseville for EX60 · Rivian mobile service + fewer brick-and-mortar sites in Tahoe.
@@ -1269,7 +1269,7 @@ function showSeason(s){
       <div class="brand-lbl r">Rivian R2 Performance</div>
       <div class="proscons">
         <div class="pros-box"><div class="pc-head">Pros</div><ul class="pc-list">
-          <li>Lowest cash entry price (~$58k) — but weakest on priority #1 (range/charging)</li>
+          <li>Lowest entry price (~$58k) — but weakest on priority #1 (range/charging)</li>
           <li>11.5 kW AC cap — ~38 mi/hr on a standard 48A wall; EPA efficiency is strong but pack is smallest here</li>
           <li>Reservations open — long waitlist; delivery date uncertain</li>
           <li>Best cargo and adventure capability: 9.6" clearance, tow hooks, all-terrain mode, frunk, 90 cu ft</li>
@@ -1300,7 +1300,7 @@ function showSeason(s){
           <li>V2H/V2G/V2L bidirectional — backup power for Truckee grid outages</li>
         </ul></div>
         <div class="cons-box"><div class="pc-head">Cons</div><ul class="pc-list">
-          <li>Highest cash price here ($70,501) — justified by best range/charging per dollar</li>
+          <li>Highest configured price here ($70,501) — justified by best range/charging per dollar</li>
           <li>Fall 2026 delivery — months without an existing SUV replacement</li>
           <li>Only one US trim at launch; budget xDrive 40 not until 2027</li>
           <li>Less adventure-capable: lower clearance, no off-road modes vs R2</li>
@@ -1323,7 +1323,7 @@ function showSeason(s){
         <div class="cons-box"><div class="pc-head">Cons</div><ul class="pc-list">
           <li>V3 Supercharger cap (~150 kW) is meaningful on I-80 Nevada — must plan for EA/IONNA</li>
           <li>322-mile range is tightest of the four in winter (258 mi at 20°F)</li>
-          <li>Sweden-built — no US tax perks (irrelevant for cash purchase)</li>
+          <li>Sweden-built — no US assembly advantage for OBBBA loan-interest deduction</li>
           <li>SF–Truckee round trip (380 mi) requires at least one charge stop in winter</li>
         </ul></div>
       </div>
@@ -1344,7 +1344,7 @@ function showSeason(s){
           <li>Not available yet — late 2026 delivery</li>
           <li>Can't be ordered or configured today</li>
           <li>Same V3 Supercharger cap (~150 kW) as P10 — must plan EA stations on Nevada segment</li>
-          <li>Sweden-built — no US tax perks (irrelevant for cash purchase)</li>
+          <li>Sweden-built — no US assembly advantage for OBBBA loan-interest deduction</li>
         </ul></div>
       </div>
     </div>
@@ -1372,12 +1372,12 @@ function showSeason(s){
         <tr><th style="width:20%">Category</th><th class="rh" style="width:20%">Rivian R2</th><th class="bh" style="width:20%">BMW iX3</th><th class="p10h" style="width:20%">EX60 P10</th><th class="p12h" style="width:20%">EX60 P12</th></tr>
       </thead>
       <tbody>
-        <tr><td class="cat" colspan="5">Cash pricing — example configured builds (May 2026)</td></tr>
-        <tr><td><strong>Cash price (example build)</strong></td><td class="dim">~$57,990+ (TBC options)</td><td>$70,501 ✓ <span class="dim">incl. crossbars</span></td><td class="win p10">$68,560 ✓ <span class="best">Lowest cash</span></td><td>$72,500</td></tr>
+        <tr><td class="cat" colspan="5">Pricing — example configured builds (May 2026)</td></tr>
+        <tr><td><strong>Configured price (example build)</strong></td><td class="dim">~$57,990+ (TBC options)</td><td>$70,501 ✓ <span class="dim">incl. crossbars</span></td><td class="win p10">$68,560 ✓ <span class="best">Lowest price</span></td><td>$72,500</td></tr>
         <tr><td>Crossbars / roof bars</td><td class="dim">Integrated rack design</td><td class="tie">$520 in total</td><td class="tie">$520 in PDF</td><td class="tie">$520 assumed</td></tr>
-        <tr><td>$/EPA mile (cash)</td><td>~$173/mi</td><td class="win b">~$162/mi <span class="best">Winner</span></td><td>~$213/mi</td><td>~$181/mi</td></tr>
-        <tr><td>Premium over R2 (cash)</td><td class="win r">Baseline</td><td>+$12,511</td><td>+$10,570</td><td>+$14,510</td></tr>
-        <tr><td>OBBBA loan deduction</td><td class="tie" colspan="4">N/A — paying cash</td></tr>
+        <tr><td>$/EPA mile (configured)</td><td>~$173/mi</td><td class="win b">~$162/mi <span class="best">Winner</span></td><td>~$213/mi</td><td>~$181/mi</td></tr>
+        <tr><td>Premium over R2</td><td class="win r">Baseline</td><td>+$12,511</td><td>+$10,570</td><td>+$14,510</td></tr>
+        <tr><td>OBBBA loan deduction</td><td class="win r">Up to ~$5,280 (3 yr)</td><td class="dim">N/A (imported)</td><td class="dim">N/A (imported)</td><td class="dim">N/A (imported)</td></tr>
         <tr><td>Key options already included in base</td><td class="dim">No full configurator yet</td><td class="dim">Most require add-ons at extra cost</td><td class="tie">Plus build — options in PDF (same)</td><td class="tie">Same spec as P10 assumed</td></tr>
         <tr><td>Order/configure today</td><td class="dim">✓ Reserve — long waitlist</td><td>✓ Reserve + $1k deposit</td><td class="win p10">✓ Orders open</td><td class="dim">✗ Not yet</td></tr>
         <tr><td class="cat" colspan="5">Range in Conditions</td></tr>
@@ -1420,11 +1420,11 @@ function showSeason(s){
 
   <div class="alert alert-blu" style="margin-bottom:1.25rem;">
     <div class="alert-hd">Scoring approach</div>
-    Priority #1: <strong>range + charging</strong> on Truckee → Steamboat / SF routes. Priority #2: brand, safety, quality. Priority #3: <strong>value for capability</strong> at cash prices — not cheapest sticker.
+    Priority #1: <strong>range + charging</strong> on Truckee → Steamboat / SF routes. Priority #2: brand, safety, quality. Priority #3: <strong>value for capability</strong> at configured prices — not cheapest sticker.
   </div>
 
   <div style="background:var(--text);color:#fff;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;">
-    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.875rem;">Cash prices (configured, May 2026)</div>
+    <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.875rem;">Configured prices (May 2026)</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;">
       <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:.875rem;">
         <div style="font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rm);margin-bottom:.3rem;">Rivian R2</div>
@@ -1450,14 +1450,14 @@ function showSeason(s){
   </div>
 
   <div class="pick-box">
-    <h3>Recommendation: BMW iX3 — $70,501 cash (example build + crossbars)</h3>
+    <h3>Recommendation: BMW iX3 — $70,501 (example build + crossbars)</h3>
     <p style="font-size:.88rem;line-height:1.65;color:var(--text);">Given the priorities above, the <strong>BMW iX3</strong> is the clearest overall choice. It wins on what matters most here: <strong>best EPA and winter range</strong> (434 / ~325 mi), <strong>fewest Steamboat charge stops</strong> (2 summer / 3 winter), <strong>400 kW peak charging</strong> on Electrify America, and <strong>best dollars per mile of range</strong> (~$162/EPA mi). Reviews (Car and Driver, The Drive, Consumer Reports) describe it as BMW's best EV yet on the new 800V Neue Klasse platform. Driving Assistance Pro is included in the example build for highway trips.</p>
     <p style="font-size:.84rem;margin-top:.5rem;color:var(--muted);"><strong>Trade-offs:</strong> Fall 2026 delivery · no integrated booster cushions · no Google Gemini · local BMW dealer for service · ~$1,941 more than Volvo P10.</p>
     <div class="pick-alt">
       <strong>Choose Volvo EX60 P12 ($72,500)</strong> if you want nearly the same road-trip range/charging profile but <strong>Volvo safety</strong> (multi-adaptive belt, booster cushions, Gemini) and can wait until late 2026 — worth the extra ~$2k over BMW for winter SF no-stop trips + ski box range.
     </div>
     <div class="pick-alt" style="border-color:var(--p10);margin-top:.5rem;">
-      <strong>Choose Volvo EX60 P10 ($68,560)</strong> if <strong>cash savings</strong> and <strong>fastest charge stops (16 min)</strong> matter more than winter highway range — best family features per dollar, but plan an extra stop (or a charge) on cold SF/Steamboat legs.
+      <strong>Choose Volvo EX60 P10 ($68,560)</strong> if <strong>price savings</strong> and <strong>fastest charge stops (16 min)</strong> matter more than winter highway range — best family features per dollar, but plan an extra stop (or a charge) on cold SF/Steamboat legs.
     </div>
     <div class="pick-alt" style="border-color:var(--r);margin-top:.5rem;">
       <strong>Choose Rivian R2 (~$58k)</strong> only if you accept uncertain delivery and will mostly tolerate <strong>more, longer charge stops</strong> — it does not match priority #1 unless price overrides everything.
@@ -1468,7 +1468,7 @@ function showSeason(s){
     <div class="vc r">
       <div class="vc-badge">Rivian R2</div>
       <div class="vc-title">#4 on stated priorities</div>
-      <div class="vc-text">Best V3 Supercharger native speed, but ranks last on range-per-stop and DC speed for I-80→Steamboat. Cash savings vs BMW (~$12.5k) don't offset ~58–70+ extra minutes charging per CO round trip (July) vs iX3/P12.</div>
+      <div class="vc-text">Best V3 Supercharger native speed, but ranks last on range-per-stop and DC speed for I-80→Steamboat. Price savings vs BMW (~$12.5k) don't offset ~58–70+ extra minutes charging per CO round trip (July) vs iX3/P12.</div>
     </div>
     <div class="vc b" style="border-width:3px">
       <div class="vc-badge">BMW iX3 · $70,501 · ★ Recommended</div>
@@ -1478,7 +1478,7 @@ function showSeason(s){
         <div class="sc-row"><span class="sc-lbl">Range</span><div class="sc-track"><div class="sc-fill b" style="width:98%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Charging</span><div class="sc-track"><div class="sc-fill b" style="width:90%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Safety/family</span><div class="sc-track"><div class="sc-fill b" style="width:72%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Cash value</span><div class="sc-track"><div class="sc-fill b" style="width:95%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill b" style="width:95%"></div></div></div>
       </div>
     </div>
     <div class="vc p10">
@@ -1489,7 +1489,7 @@ function showSeason(s){
         <div class="sc-row"><span class="sc-lbl">Range</span><div class="sc-track"><div class="sc-fill p10" style="width:62%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Charging</span><div class="sc-track"><div class="sc-fill p10" style="width:88%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Safety/family</span><div class="sc-track"><div class="sc-fill p10" style="width:98%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Cash value</span><div class="sc-track"><div class="sc-fill p10" style="width:78%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill p10" style="width:78%"></div></div></div>
       </div>
     </div>
     <div class="vc p12">
@@ -1500,7 +1500,7 @@ function showSeason(s){
         <div class="sc-row"><span class="sc-lbl">Range</span><div class="sc-track"><div class="sc-fill p12" style="width:92%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Charging</span><div class="sc-track"><div class="sc-fill p12" style="width:82%"></div></div></div>
         <div class="sc-row"><span class="sc-lbl">Safety/family</span><div class="sc-track"><div class="sc-fill p12" style="width:98%"></div></div></div>
-        <div class="sc-row"><span class="sc-lbl">Cash value</span><div class="sc-track"><div class="sc-fill p12" style="width:85%"></div></div></div>
+        <div class="sc-row"><span class="sc-lbl">Value</span><div class="sc-track"><div class="sc-fill p12" style="width:85%"></div></div></div>
       </div>
     </div>
   </div>
@@ -1509,7 +1509,7 @@ function showSeason(s){
     <div style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:.75rem;font-size:.95rem;">Quick decision rules</div>
     <p><strong>Pick BMW iX3</strong> if range + charging speed + fewest stops matter most (priority #1) and you can wait until Fall 2026.</p>
     <p><strong>Pick Volvo P12</strong> if you want the same road-trip story plus Volvo safety/booster/Gemini and January SF without charging is non-negotiable.</p>
-    <p><strong>Pick Volvo P10</strong> if $1,941 less cash than BMW matters and you'll accept extra winter charging — still the best toddler-focused cabin.</p>
+    <p><strong>Pick Volvo P10</strong> if $1,941 less than BMW matters and you'll accept extra winter charging — still the best toddler-focused cabin.</p>
     <p><strong>Skip Rivian R2</strong> unless you accept a long waitlist and weaker fast-charging vs the European options.</p>
   </div>
 
